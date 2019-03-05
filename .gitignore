@@ -1,0 +1,6 @@
+# Repertory
+/nbproject/
+
+# Files
+/*.lock
+/*.phar

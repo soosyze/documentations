@@ -1,0 +1,7 @@
+{
+    "todo.index": {
+        "methode" : "GET",
+        "path": "todo/index",
+        "uses": "TodoController@index"
+    }
+}

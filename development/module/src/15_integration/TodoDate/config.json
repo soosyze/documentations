@@ -1,0 +1,13 @@
+{
+    "TodoDate": {
+        "name": "TodoDate",
+        "controller": {
+            "TodoDateController": "TodoDate\\Controller\\TodoDateController"
+        },
+        "version": "1.0",
+        "description": "Ajoute une date butoir à vos tâches.",
+        "package": "TodoList",
+        "locked": false,
+        "required": ["TodoModule"]
+    }
+}

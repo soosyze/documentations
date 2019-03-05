@@ -1,0 +1,13 @@
+{
+    "TodoModule": {
+        "name": "TodoModule",
+        "controller": {
+            "TodoController": "TodoModule\\Controller\\TodoController"
+        },
+        "version": "1.0",
+        "description": "Liste des tâches à faire.",
+        "package": "TodoList",
+        "locked": false,
+        "required": []
+    }
+}

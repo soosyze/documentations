@@ -1,0 +1,22 @@
+{
+    "todo.date.hook": {
+        "class": "TodoDate\\Services\\TodoHook",
+        "arguments": [
+            "@query",
+            "@schema"
+        ],
+        "hooks": {
+            "todo.item.create.form.data": "hookCreateFormData",
+            "todo.item.create.form": "hookCreateForm",
+
+            "todo.item.store.validator": "hookStoreValidator",
+            "todo.item.store.after": "hookStoreAfter",
+
+            "todo.item.edit.form.data": "hookEditFormData",
+            "todo.item.edit.form": "hookCreateForm",
+
+            "todo.item.update.validator": "hookStoreValidator",
+            "todo.item.update.after": "hookUpdateAfter"
+        }
+    }
+}

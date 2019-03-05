@@ -1,0 +1,46 @@
+{
+    "todo.index": {
+        "methode": "GET",
+        "path": "todo/index",
+        "uses": "TodoController@index"
+    },
+    "todo.admin": {
+        "methode": "GET",
+        "path": "admin/todo",
+        "uses": "TodoController@admin"
+    },
+    "todo.item.create": {
+        "methode": "GET",
+        "path": "todo/item",
+        "uses": "TodoController@create"
+    },
+    "todo.item.store": {
+        "methode": "POST",
+        "path": "todo/item",
+        "uses": "TodoController@store"
+    },
+    "todo.item.edit": {
+        "methode": "GET",
+        "path": "todo/item/:id/edit",
+        "uses": "TodoController@edit",
+        "with": {
+            ":id": "\\d+"
+        }
+    },
+    "todo.item.update": {
+        "methode": "POST",
+        "path": "todo/item/:id/edit",
+        "uses": "TodoController@update",
+        "with": {
+            ":id": "\\d+"
+        }
+    },
+    "todo.item.delete": {
+        "methode": "POST",
+        "path": "todo/item/:id/delete",
+        "uses": "TodoController@delete",
+        "with": {
+            ":id": "\\d+"
+        }
+    }
+}
