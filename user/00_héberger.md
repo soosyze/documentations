@@ -1,8 +1,9 @@
-﻿# Hébérger
+# Hébérger
 
 Avant d’entamer votre fabuleuse aventure dans le monde du web avec Soosyze, vous devez commencer par préparer le terrain.
 
-Pour faire fonctionner votre site web, il va falloir **l’héberger sur un serveur**. Si vous n’avez aucune connaissance dans le web, ce n’est pas grave, je vais vulgariser mes expliquations pour que la majorité des lecteurs et lectrices puissent suivre.
+Pour faire fonctionner votre site web, il va falloir l’héberger sur un serveur. Si vous n’avez aucune connaissance dans le web, ce n’est pas grave, les explications seront vulgarisées afin que tout un chacun s'y retrouve.
+
 Pour commencer, vous devez choisir entre :
 
 * **Héberger votre site en local** : faire fonctionner votre site sur votre ordinateur personnel (*vous seul pourrez y accéder*),
@@ -11,25 +12,25 @@ Pour commencer, vous devez choisir entre :
 ## Héberger votre site en local
 
 
-Quelque soit le système d’exploitation (*Windows, Mac, Linux...*) que vous utilisez, vous devrez installer un **serveur HTTP** (*serveur web*) et **PHP** (*language de développement utilisé pour Soosyze*).
+Quel que soit le système d’exploitation (*Windows, Mac, Linux...*) que vous utilisez, vous devrez installer un **serveur HTTP** (*serveur web*) et **PHP** (*langage de développement utilisé pour Soosyze*).
 
-Pour information, Soosyze CMS supporte **Apache 2.2+** et **Ngnix 1.0+**, qui sont deux des serveurs web les plus utilisés.
+Pour information, Soosyze CMS supporte **Apache 2.2+** et **Nginx 1.0+**, qui sont deux des serveurs web les plus utilisés.
 
-### Wamp Pour Windows
+### Installation de votre serveur : Wamp pour Windows
 
 Si vous utilisez Windows comme système d’exploitation, il existe plusieurs logiciels "tout-en-un". Notre tutoriel sera centré sur le logiciel **WampServeur 3**. WAMP signifie :
 
 * **W**indows (*votre système d’exploitation)*,
 * **A**pache (*votre serveur web*),
 * **M**ySQL (*logiciel de base de données, qui n’est pas obligatoire pour Soosyze*),
-* **P**HP (*le language de développement utilisé pour Soosyze*).
+* **P**HP (*le langage de développement utilisé pour Soosyze*).
 
 [Site officiel](http://www.wampserver.com/).
 [Télécharger WampServeur 3](https://sourceforge.net/projects/wampserver/files/latest/download?source=files).
 
 #### Pré-requis
 
-La première fois que je l’ai installé, j’ai un peu galéré. Mais j’ai fini par trouver un excellent [topic sur le forum de wamp](http://forum.wampserver.com/read.php?1,137154), détaillant toutes les étapes pour l’installer correctement. Il est régulièrement mis à jour par la communauté, mais je m'efforce ici de le vulgariser, afin que chacun s’y retrouve.
+Nous avons ici recapitulé de manière simplifié toutes les étapes de l'installation de WAMP tirées de cet excellent [topic sur le forum de wamp](http://forum.wampserver.com/read.php?1,137154) régulièrement mis à jour par la communauté. N'hésitez pas à le consulter pour vous aider dans votre progression.
 
 **Avant d’installer WampServeur 3**, voici certaines règles :
 
@@ -40,18 +41,15 @@ La première fois que je l’ai installé, j’ai un peu galéré. Mais j’ai f
 
 Si vous êtes dans le cas 1. ou 2. vous devez sauvegarder vos projets, désinstaller entièrement WAMP 2 pour passer à la version 3.
 
-Si vous êtes dans le cas 4. je vous conseille d’installer/ré-installer toutes les biliothèques Visual Studio. Ce sera un réel gain de temps, plutôt qu’aller vérifier quelles biliothèques existent pour ensuite cibler celles qui vous manquent.
+Si vous êtes dans le cas 4. je vous conseille d’installer/ré-installer toutes les biliothèques Visual Studio. Ce sera un réel gain de temps, au lieu d'aller vérifier quelles biliothèques existent pour ensuite cibler celles qui vous manquent.
 
 #### Version de votre architecture (*32bits ou 64bits*)
 
-**Pour info**, le nombre de bits utilisés par votre ordinateur correspond à la largeur des registres mémoire des processeurs sur les nombres entiers.
-
-Si l’explication précédente ne vous a pas convaincue, retenez juste que :
+Pour simplifier, retenez juste que :
 
 * À l’heure ou j’écris ce tutoriel, la majorité des systèmes sont sous 64bits,
 * Les logiciels 64bits ne peuvent pas s’installer sur un ordinateur 32bits,
 * Les logiciels 32bits peuvent s’installer (*généralement*) sur un ordinateur 64bits (*logique, qui peut le plus peut le moins*).
-
 
 Pour connaître le nombre de bits qu’utilise votre architecture, suivez les instructions suivantes :
 
@@ -92,9 +90,9 @@ Pour tout problème rencontré, n’hésitez pas à vous renseigner sur le forum
 
 ## Héberger votre site en ligne
 
-Ici, nous n’expliquerons pas comment créer un serveur web. Ce serait intéressant mais trop complexe pour les non initiés. Je vous encourage néanmoins à vous documenter. Par contre, nous vous expliquerons comment trouver un hébergeur gratuit pour votre site.
+Ici nous allons vous expliquer comment trouver un hébergeur gratuit pour votre site. Sachez néanmoins que vous pouvez créer votre servreur web vous même si vous le souhaitez.
 
-Un hébergeur est une entreprise (*ou personne morale, comme on dit dans le milieu*) qui vous vend des services pour vos projets web. Dans ce tutoriel nous vous expliquerons comment choisir un nom de domaine et une offre d’hébergement gratuite de votre site.
+Un hébergeur est une entreprise (*ou personne morale, comme on dit dans le milieu ;)*) qui vous vend des services pour vos projets web. Dans ce tutoriel nous vous expliquerons comment choisir un nom de domaine et une offre d’hébergement gratuite de votre site.
 
 ### Un nom de domaine
 
@@ -106,7 +104,7 @@ Première étape, trouvez-vous un **nom de domaine**, il s’agit de l’adresse
 
 Le nom de domaine devra être disponible, et vous devrez trouver un un nom de domaine correspondant à l’activité de votre site web. Chaque hébergeur vous proposera de vérifier si le nom de domaine est disponible, mais vous pouvez aussi passer par un service tel que [https://www.nom-domaine.fr](https://www.nom-domaine.fr/).
 
-Je vous conseille de bien choisir votre nom de domaine, car il représentera vos activités et pourrait être utilisé pour plein d’autre choses (*logos, cartes de visite, le référencement de votre site...*). Il est donc préférable :
+Je vous conseille de bien choisir votre nom de domaine, car il représentera vos activités et pourrait être utilisé pour plein d’autres choses (*logos, cartes de visite, référencement de votre site...*). Il est donc préférable :
 
 *   qu’il soit clair et lisible,
 *   qu’il ne dépasse pas les 50 caractères ou 3 mots,
@@ -121,7 +119,7 @@ Je vous recommande de réserver votre nom de domaine au moment ou vous choisirez
 
 Il existe de nombreux types d’offres d’hébergement. Pour ne mentionner que celles-ci :
 
-**Des offres d’hébergements mutualisés** (*niveau débutant*) : pour faire simple, les ressources (*l’espace, la mémoire, la puisssance de calcul...*) de la machine qui hébergera votre site en ligne seront partagées. Ces offres mutualisées sont l’une des moins chères proposées par les hébergeurs, puisque les coûts sont répartis entre tous les utilisateurs du service. Généralement à privilégier, car elles présentent un bon rapport qualité/prix.
+**Des offres d’hébergements mutualisés** (*niveau débutant*) : pour faire simple, les ressources (*l’espace, la mémoire, la puisssance de calcul...*) de la machine qui hébergera votre site en ligne seront partagées. Ces offres font parties des moins chères proposées par les hébergeurs, puisque les coûts sont répartis entre tous les utilisateurs du service. Généralement à privilégier, car elles présentent un bon rapport qualité/prix.
 
 **Des offres d’hébergement dédié** (*niveau porte des enfers*) : de plus en plus présentes dans le cloud, elles sont beaucoup plus chères mais vous apportent une grande souplesse et puissance pour votre site. Ces offres dédiées premettent de jouir de l’exclusivité de la machine qui héberge votre site web et donc d’y apporter des configurations et modifications plus personnalisées. Cependant, il est préférable d’avoir de bonnes notions en informatique (_comme en système et/ou en infra, souvent en Linux, petite larme dédiée à tous les dev nuls en infra_), pour profiter pleinement de ce genre d’offres.
 
@@ -139,9 +137,9 @@ Le conseil que je donne généralement est de choisir votre offre d’hébérgem
 
 ### Un hébergeur
 
-Comme je vous l’ai précédemment indiqué, il y a de nombreux hébergeurs. Il suffirait de rechercher sur internet avec les mots-clés "*hébergement, site web, gratuit*" pour que vous en trouviez. Mais nous allons quand même vous faire une liste non exaustive des hébergeurs web gratuits, ne pouvant pas détailler comment utiliser leurs services, faute d’avoir pu tous les tester (*peut-être un jour ^^*).
+Comme je vous l’ai précédemment indiqué, il y a de nombreux hébergeurs. Nous vous proposons ici une liste non exhaustive que vous pourrez complèter en faisant vos propres recherches sur internet (*avec les mots clés suivants : hébergement, site web, gratuit...*)
 
-Essayez de les comparer afin de trouver le plus adapté pour votre site :
+Nous vous conseillons de les comparer afin de trouver le plus adapté pour votre site :
 
 * (*fr*) [http://www.free.fr/freebox/pages/internet/votre-web.html](http://www.free.fr/freebox/pages/internet/votre-web.html),
 * (*fr*) [https://www.alwaysdata.com/fr/](https://www.alwaysdata.com/fr/),
