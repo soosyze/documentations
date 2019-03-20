@@ -1,6 +1,6 @@
-﻿# Configurer
+# Configurer
 
-Après l’installation de votre site, vous êtes redirigés vers la page d’accueil par défaut de votre site. Pour configurer votre site, vous devez d’abord vous connecter.
+Après l’installation de votre site, vous êtes redirigés vers la page d’accueil par défaut. Pour configurer votre site, vous devez d’abord vous connecter :
 
 ![Screenshot de la page d’accueil de SoosyzeCMS](/assets/user/soosyze-accueil-desktop.png)
 
@@ -64,7 +64,7 @@ Pour vous rendre au panneau de configuration, cliquez sur le lien **_Configurati
 11. **Mots-clés** : vous aide au référencement de votre site dans les moteurs de recherche,
 12. **Favicon** : Champ de téléchargement pour votre favicon (*image à gauche du titre de la fenêtre de votre navigateur*).
 
-Chaque modification devra être validée en cliquant sur **_Enregistrer_** en bas du formulaire.
+À la fin de vos modifications, cliquez sur **_Enregistrer_** en base du formulaire pour les valider.
 
 ## Configurer les modules
 
@@ -80,8 +80,8 @@ Exemple : le module News utilise le module Node, donc Node **est requis** par Ne
 
 ### Installer un module
 
-1. Téléchargez parmi [les modules contributeurs](#) lequel vous souhaitez installer,
-2. Connectez-vous à votre serveur est rendez-vous dans le répertoire contenant SoosyzeCMS,
+1. Téléchargez parmi [les modules contributeurs](https://github.com/soosyze-extension) celui que vous souhaitez installer,
+2. Connectez-vous à votre serveur et rendez-vous dans le répertoire contenant SoosyzeCMS,
 3. Rendez-vous dans le repértoire **app/modules** et déposez le module téléchargé, décompressé de son archive,
 4. Allez sur la page de gestion de vos modules sur votre site,
 5. Cliquez sur sur le bouton à gauche du nom du module,
