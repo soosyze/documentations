@@ -1,10 +1,10 @@
-﻿# Installer
+# Installer
 
 Si vous avez suivi le chapitre précédent, vous savez qu’il existe deux façons d’héberger votre site web. Cette distinction se fera aussi pour l’installation du CMS.
 
 Dans un premier temps, [téléchargez l’archive de SoosyzeCMS sur votre ordinateur](https://github.com/soosyze/soosyze/releases/download/1.0.0-alpha4.1/soosyze.zip).
 
-Cette archive contient les fichiers sources de l’application. Vous devez donc déposer ces fichiers en local ou en ligne. Une fois les fichiers sources au bon endroit, vous allez enfin pouvoir installer le CMS.
+Cette archive contient les fichiers source de l’application. Vous devez donc déposer ces fichiers en local ou en ligne. Une fois les fichiers source au bon endroit, vous allez enfin pouvoir installer le CMS.
 
 ## Déposer le code source en local
 
@@ -42,7 +42,7 @@ Il en existe plusiseurs, mais nous nous focaliserons sur le logiciel FileZilla. 
 
 #### Connexion à votre serveur
 
-Souvenez-vous, à la fin de "étape 1 : Héberger", je vous avais préconisé de conserver les identifiants de connexion fournis par votre hébergeur :
+Souvenez-vous, à la fin de "étape 1 : Héberger", l'hébergeur que vous avez choisi vous a fourni les identifiants de connexion :
 
 *  **Nom d’Hôte**,
 *  **Protocole** (*dans 99% des cas c’est du FTP ou SFTP, si votre hébérgeur vous le permet*),
@@ -52,15 +52,17 @@ Souvenez-vous, à la fin de "étape 1 : Héberger", je vous avais préconisé de
 C’est maintenant que nous allons les utiliser :
 
 1. Lancez l’execution de FileZilla,
-2. En haut à gauche de la fenêtre, cliquez sur le bouton **_Gestionnaire de Sites_** (*le titre des bouttons s’affiche au survol de la souris*),
+2. En haut à gauche de la fenêtre, cliquez sur le bouton **_Gestionnaire de Sites_** (*le titre des boutons s’affiche au survol de la souris*),
 3. Une fenêtre modale s’affiche, cliquez sur **_Nouveau Site_**,
-4. Renommez l’item qui vient d’apparaître,
-5. Toujours dans la fenêtre modale **Gestionnaire de sites**, dans l’onglet *Général*, remplissez les champs correspondants :
+4. Renommez l’entrée qui vient de s'ajouter,
+5. Toujours dans la fenêtre modale **_Gestionnaire de sites_**, dans l’onglet *Général*, remplissez les champs correspondants :
+
   a. **Protocole** : FTP - Protocole de Transert de Fichiers (*si votre hébergeur vous permet le SFTP, je vous conseille de l’utiliser*),
   b. **Hôte** : Le nom d’hôte fourni par votre hébérgeur (*il s’agit du nom du serveur accueillant vos applications*), 
   c. **Chiffrement** : Connexion FTP simple,
-  d. **Type d’autentification** : (*À vous de voir ce qui vous convient le mieux, je recommande l’option Demander le mot de passe*).
+  d. **Type d’authentification** : (*À vous de voir ce qui vous convient le mieux, je recommande l’option Demander le mot de passe*).
   e. **Identifiant** : Inscrivez l’identifiant fourni par votre hébérgeur,
+
 6. Puis cliquez sur **_Connexion_**.
 7. Une nouvelle fenêtre s’ouvrira : renseignez le mot de passe puis validez.
 
@@ -68,6 +70,7 @@ C’est maintenant que nous allons les utiliser :
 ![Screen FileZilla et gestionnaire de sites](/assets/user/filezilla.png)
 
 Vous voilà connecté à votre serveur :
+
 8. Décompressez l’archive de Soosyze CMS, 
 9. Sélectionnez tout le code source et glissez-le dans le répertoire de votre serveur.
 
@@ -77,7 +80,7 @@ Le répertoire qui est censé recevoir le code source est souvent nommé par dé
 
 ## Installer le CMS
 
-Maintenant que les fichiers sources sont au bon endroit, ouvrez un navigateur web (*Firefox, Chrome, Opéra, Safarie, Edge…*), et dans la barre d’adresse, entrez la valeur suivante :
+Maintenant que les fichiers sources sont au bon endroit, ouvrez un navigateur web (*Firefox, Chrome, Opéra, Safari, Edge…*), et dans la barre d’adresse, entrez la valeur suivante :
 
 *   en local, [127.0.0.1/Soosyze](http://127.0.0.1/Soosyze),
 *   en ligne, votre nom de domaine.
