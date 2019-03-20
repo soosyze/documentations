@@ -15,7 +15,7 @@ Si vous comprenez ça, vous avez compris plus de 50% du fonctionnement d’un CM
 
 Rendez-vous sur la page de gestion de vos contenus en cliquant sur le lien **_Contenu_** dans le menu administrateur. Cette page visualise tous les contenus de votre site, leurs dates de création, de modifiaction et leurs états de publication.
 
-**Pour info !** Vos contenus sont gérés par le module **Node** du SoosyzeCMS, il permet **créer des type de contenus.** Les types de contenus sont par exemple une **page** ou un **article**. Ils permettent de créer du contenu avec différents champs.
+**Pour info !** Vos contenus sont gérés par le module **Node** du SoosyzeCMS, il permet **créer des types de contenus.** Les types de contenus permettent de créer et mettre en forme vos données, par exemple une **page** ou un **article**.
 
 `GET ?admin/content`
 
@@ -33,7 +33,7 @@ Vous serez redirigé à la page des types de contenus. Par défaut vous avez le 
 
 Cliquez sur le titre de l’un d’entre eux pour accéder au formulaire de création.
 
-Remplissez les champs corespondant au format texte ou HTML, puis cliquez sur **_Enregistrer_** et vous reviendrez à la page de gestion de vos contenus.
+Remplissez les champs correspondants au format texte ou HTML, puis cliquez sur **_Enregistrer_** et vous reviendrez à la page de gestion de vos contenus.
 
 `GET ?node/add/page`
 `GET ?node/add/article`
@@ -54,9 +54,8 @@ Pour supprimer le contenu, rendez-vous sur la page de gestion de contenus et cli
 
 Rendez-vous sur la page de gestion du menu en cliquant sur le lien **_Menu_** dans le menu d’administrateur. Depuis cette interface, vous pouvez :
 
-1.  Activer ou désactiver les liens,
-2.  Changer la position d’affichage du lien dans le menu, à partir de la liste de selection dans la colonne _Poids_,
-3.  Faire glisser les liens avec votre souris.
+1. Activer ou désactiver les liens,
+2. Changer la position d’affichage du lien à partir de la colonne _Poids_ (*ou déplacant les liens à l'aide de votre souris.*),
 
 Une fois les modifications apportées, cliquez sur **_Enregistrer_** en bas de la page de gestion du menu.
 
@@ -76,7 +75,7 @@ Vous serez redirigé vers le formulaire d’ajout de lien. Remplissez les champs
 
 ### Modifier un lien
 
-Depuis la page de gestion de vos menus, cliquez sur **_Editer_** dans la colonne actions du lien souhaité.
+Depuis la page de gestion de vos menus, cliquez sur **_Editer_** dans la colonne *Actions* du lien souhaité.
 
 Vous serez redirigé vers le formulaire d’édition du lien. Modifiez les champs souhaités et cliquez sur **_Enregistrer_**.
 
