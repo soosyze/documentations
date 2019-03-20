@@ -8,7 +8,7 @@ Après l’installation de votre site, vous êtes redirigés vers la page d’ac
 
 ### Connexion utilisateur
 
-Pour accéder au formulaire de connexion, cliquer sur le lien **_Connexion_** dans le menu utilisateur en bas à droite de votre site (*accessible à n’importe quelle page*).
+Pour accéder au formulaire de connexion, cliquez sur le lien **_Connexion_** dans le menu utilisateur en bas à droite de votre site (*accessible à n’importe quelle page*).
 
 `GET ?user/login`
 

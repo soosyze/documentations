@@ -48,7 +48,7 @@ class TodoController extends \Soosyze\Controller
 }
 ```
 
-Avant de tester votre module, vous devez l’activer pour que SoosyseFramwork puisse exécuter le code.
+Avant de tester votre module, vous devez l’activer pour que SoosyseFramework puisse exécuter le code.
 
 Rendez-vous dans le répertoire `app`, éditez le fichier `app_core.php` et ajoutez la ligne `"TodoController" => new TodoModule\Controller\TodoController()` à la fonction `loadModules()`.
 

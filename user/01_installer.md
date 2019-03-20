@@ -42,27 +42,25 @@ Il en existe plusiseurs, mais nous nous focaliserons sur le logiciel FileZilla. 
 
 #### Connexion à votre serveur
 
-Souvenez-vous, à la fin de "étape 1 : Héberger", l'hébergeur que vous avez choisi vous a fourni les identifiants de connexion :
+Souvenez-vous, à la fin de "étape 1 : Héberger", l’hébergeur que vous avez choisi vous a fourni les identifiants de connexion :
 
-*  **Nom d’Hôte**,
-*  **Protocole** (*dans 99% des cas c’est du FTP ou SFTP, si votre hébérgeur vous le permet*),
-*  Votre **identifiant**,
-*  Et votre **mot de passe**.
+* **Nom d’Hôte**,
+* **Protocole** (*dans 99% des cas c’est du FTP ou SFTP, si votre hébérgeur vous le permet*),
+* Votre **identifiant**,
+* Et votre **mot de passe**.
 
 C’est maintenant que nous allons les utiliser :
 
 1. Lancez l’execution de FileZilla,
 2. En haut à gauche de la fenêtre, cliquez sur le bouton **_Gestionnaire de Sites_** (*le titre des boutons s’affiche au survol de la souris*),
 3. Une fenêtre modale s’affiche, cliquez sur **_Nouveau Site_**,
-4. Renommez l’entrée qui vient de s'ajouter,
+4. Renommez l’entrée qui vient de s’ajouter,
 5. Toujours dans la fenêtre modale **_Gestionnaire de sites_**, dans l’onglet *Général*, remplissez les champs correspondants :
-
-  a. **Protocole** : FTP - Protocole de Transert de Fichiers (*si votre hébergeur vous permet le SFTP, je vous conseille de l’utiliser*),
-  b. **Hôte** : Le nom d’hôte fourni par votre hébérgeur (*il s’agit du nom du serveur accueillant vos applications*), 
-  c. **Chiffrement** : Connexion FTP simple,
-  d. **Type d’authentification** : (*À vous de voir ce qui vous convient le mieux, je recommande l’option Demander le mot de passe*).
-  e. **Identifiant** : Inscrivez l’identifiant fourni par votre hébérgeur,
-
+    1. **Protocole** : FTP - Protocole de Transert de Fichiers (*si votre hébergeur vous permet le SFTP, nous vous conseillons de l’utiliser*),
+    2. **Hôte** : Le nom d’hôte fourni par votre hébérgeur (*il s’agit du nom du serveur accueillant vos applications*), 
+    3. **Chiffrement** : Connexion FTP simple,
+    4. **Type d’authentification** : (*À vous de voir ce qui vous convient le mieux, nous recommandons l’option Demander le mot de passe*).
+    5. **Identifiant** : Inscrivez l’identifiant fourni par votre hébérgeur,
 6. Puis cliquez sur **_Connexion_**.
 7. Une nouvelle fenêtre s’ouvrira : renseignez le mot de passe puis validez.
 
@@ -82,8 +80,8 @@ Le répertoire qui est censé recevoir le code source est souvent nommé par dé
 
 Maintenant que les fichiers sources sont au bon endroit, ouvrez un navigateur web (*Firefox, Chrome, Opéra, Safari, Edge…*), et dans la barre d’adresse, entrez la valeur suivante :
 
-*   en local, [127.0.0.1/Soosyze](http://127.0.0.1/Soosyze),
-*   en ligne, votre nom de domaine.
+* En local, [127.0.0.1/Soosyze](http://127.0.0.1/Soosyze),
+* En ligne, votre nom de domaine.
 
 La page suivante se présentera à vous. Remplissez tous les champs et cliquez sur **_Installer_**.
 

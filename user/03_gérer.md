@@ -1,4 +1,4 @@
-﻿# Gérer
+# Gérer
 
 Maintenant que votre site et installé et configuré, il ne reste plus qu’à étudier la gestion de vos contenus et leur accessibilité.
 

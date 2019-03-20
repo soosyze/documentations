@@ -177,7 +177,7 @@ public function store( $req )
 {
     $post      = $req->getParsedBody();
     $validator = new Validator();
-    
+
     $validator->setRules([
             'title'    => 'required|string|max:255',
             'height'   => 'required|int|min:1',
@@ -259,7 +259,7 @@ public function create( $req )
 
     /* Délcaration des données d’un item vide. */
     $data = ['title'=>'', 'height' => 1, 'achieve' => false ];
-    
+
     /**
      * Si les inputs nous reviennent par une variable de session c’est qu’ils ont échoués au test. 
      */
@@ -387,7 +387,7 @@ public function udpate( $id, $req )
 
     $post      = $req->getParsedBody();
     $validator = new Validator();
-        
+
     $validator->setRules([
             'title'   => 'required|string|max:255',
             'height'  => 'required|int|min:1',
@@ -420,7 +420,7 @@ public function edit( $id, $req )
     if (!($data = $this->getItem( $id ))) {
         return $this->get404($req);
     }
-        
+
     /**
      * Si les inputs nous reviennent par une variable de session, c’est qu’ils ont échoué au test. 
      */
@@ -430,7 +430,7 @@ public function edit( $id, $req )
         /* On supprime les données retournées. */
         unset($_SESSION[ 'inputs' ]);
     }
-        
+
     $form = new FormBuilder(['method' => 'post', 'action' => '?todo/item/' . $id . '/edit']);
     $form->group('todo-group-item-title', 'div', function ($form) use ($data){
             $form->label('todo-item-title-label', 'Item', ['for'=>'todo-item-title'])
@@ -457,7 +457,7 @@ public function edit( $id, $req )
         }, ['class' => 'form-group'])
         ->token()
         ->submit('submit', 'Enregistrer', [ 'class' => 'btn btn-success' ]);
-            
+
     /* Si le formulaire n’est pas valide. */
     if (isset($_SESSION[ 'errors' ]))
     {

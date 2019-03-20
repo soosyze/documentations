@@ -2,50 +2,50 @@
 
 ```
 www/
-├── app/ Le code source de votre site.
-│   ├── config/
-│   │   ├── database.json
-│   │   └── settings.json
-│   │
-│   ├── data/
-│   ├── files/
-│   ├── modules/
-│   ├── themes/
-│   └── app_core.php
+├─ app/ Le code source de votre site.
+│  ├─ config/
+│  │  ├─ database.json
+│  │  └─ settings.json
+│  │
+│  ├─ data/
+│  ├─ files/
+│  ├─ modules/
+│  ├─ themes/
+│  └─ app_core.php
 │
-├── bootstrap/ Fichier de lancement du Framework.
-│	├── autoload.php
-│   ├── debug.php
-│   ├── requirements.php
-│   └── start.php
+├─ bootstrap/ Fichier de lancement du Framework.
+│  ├─ autoload.php
+│  ├─ debug.php
+│  ├─ requirements.php
+│  └─ start.php
 │
-├── core/ Le code source des modules et thèmes par défauts du CMS.
-│   ├── modules/
-│   │   ├── Contact/
-│   │   ├── FileSystem/
-│   │   ├── Install/
-│   │   ├── Menu/
-│   │   ├── News/
-│   │   ├── Node/
-│   │   ├── QueryBuilder/
-│   │   ├── System/
-│   │   ├── Template/
-│   │   └── User/
-│   │
-│   └── themes/
-│       ├── Admin/
-│       ├── Bootstrap 3/
-│       └── Quiet Blue/
+├─ core/ Le code source des modules et thèmes par défauts du CMS.
+│  ├─ modules/
+│  │  ├─ Contact/
+│  │  ├─ FileSystem/
+│  │  ├─ Install/
+│  │  ├─ Menu/
+│  │  ├─ News/
+│  │  ├─ Node/
+│  │  ├─ QueryBuilder/
+│  │  ├─ System/
+│  │  ├─ Template/
+│  │  └─ User/
+│  │
+│  └─ themes/
+│      ├─ Admin/
+│      ├─ Bootstrap 3/
+│      └─ Quiet Blue/
 │
-└──vendor/
-   ├── ircmaxell/password-compat/
-   ├── psr/
-   │   ├── container/
-   │   └── http-message/
-   │
-   └──soosyse/
-      ├── framework/
-      └── queryflatfile/
+└─ vendor/
+    ├─ ircmaxell/password-compat/
+    ├─ psr/
+    │  ├─ container/
+    │  └─ http-message/
+    │
+    └─ soosyse/
+       ├─ framework/
+       └─ queryflatfile/
 ```
 
 Le répertoire `app` contient l’ensemble de la configuration de votre application :

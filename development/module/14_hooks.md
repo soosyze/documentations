@@ -1,4 +1,4 @@
-# Hook
+# Hooks
 
 Un hook signifie littéralement **crochet** en anglais. Il a pour objectif de laisser des points d’entrée dans les contrôleurs afin que les autres développeurs puissent personnaliser des fonctions déjà existantes. J’en ai déjà fait allusion dans le chapitre sur les formulaires. 
 

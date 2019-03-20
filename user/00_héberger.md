@@ -2,7 +2,7 @@
 
 Avant d’entamer votre fabuleuse aventure dans le monde du web avec Soosyze, vous devez commencer par préparer le terrain.
 
-Pour faire fonctionner votre site web, il va falloir l’héberger sur un serveur. Si vous n’avez aucune connaissance dans le web, ce n’est pas grave, les explications seront vulgarisées afin que tout un chacun s'y retrouve.
+Pour faire fonctionner votre site web, il va falloir l’héberger sur un serveur. Si vous n’avez aucune connaissance dans le web, ce n’est pas grave, les explications seront vulgarisées afin que tout un chacun s’y retrouve.
 
 Pour commencer, vous devez choisir entre :
 
@@ -30,7 +30,7 @@ Si vous utilisez Windows comme système d’exploitation, il existe plusieurs lo
 
 #### Pré-requis
 
-Nous avons ici recapitulé de manière simplifié toutes les étapes de l'installation de WAMP tirées de cet excellent [topic sur le forum de wamp](http://forum.wampserver.com/read.php?1,137154) régulièrement mis à jour par la communauté. N'hésitez pas à le consulter pour vous aider dans votre progression.
+Nous avons ici recapitulé de manière simplifié toutes les étapes de l’installation de WAMP tirées de cet excellent [topic sur le forum de wamp](http://forum.wampserver.com/read.php?1,137154) régulièrement mis à jour par la communauté. N’hésitez pas à le consulter pour vous aider dans votre progression.
 
 **Avant d’installer WampServeur 3**, voici certaines règles :
 
@@ -41,7 +41,7 @@ Nous avons ici recapitulé de manière simplifié toutes les étapes de l'instal
 
 Si vous êtes dans le cas 1. ou 2. vous devez sauvegarder vos projets, désinstaller entièrement WAMP 2 pour passer à la version 3.
 
-Si vous êtes dans le cas 4. je vous conseille d’installer/ré-installer toutes les biliothèques Visual Studio. Ce sera un réel gain de temps, au lieu d'aller vérifier quelles biliothèques existent pour ensuite cibler celles qui vous manquent.
+Si vous êtes dans le cas 4. nous vous conseillons d’installer/ré-installer toutes les biliothèques Visual Studio. Ce sera un réel gain de temps, au lieu d’aller vérifier quelles biliothèques existent pour ensuite cibler celles qui vous manquent.
 
 #### Version de votre architecture (*32bits ou 64bits*)
 
@@ -54,10 +54,10 @@ Pour simplifier, retenez juste que :
 Pour connaître le nombre de bits qu’utilise votre architecture, suivez les instructions suivantes :
 
 1. Allez dans votre menu démarrer,
-2. Cliquez sur _Panneau de configuration_,
-3. Puis sur _Système et sécurité_,
-4. Et enfin sur _Système_,
-5. Vous aurez l’indication dans _Type du système_.
+2. Cliquez sur **_Panneau de configuration_**,
+3. Puis sur **_Système et sécurité_**,
+4. Et enfin sur **_Système_**,
+5. Vous aurez l’indication dans **_Type du système_**.
 
 #### Bibliothèques Visual Studio
 
@@ -73,10 +73,10 @@ Si vous avez un ordinateur avec une **architecture 64bits** vous devrez **instal
 | VC13          | [Visual C++ for Visual Studio 2012 Update 4](https://support.microsoft.com/en-us/help/4032938/)              |                                                                                                               |
 | VC14 & VC15   | [Visual C++ Redistributable Packages for Visual Studio 2017](https://aka.ms/vs/15/release/VC_redist.x86.exe) | [Visual C++ Redistributable Packages for Visual Studio 2017](https://aka.ms/vs/15/release/VC_redist.x64.exe)  |
 
-1) Les versions VC9, VC10 et VC11 sont obligatoires,  
-2) Les versions VC11, VC13 et VC15 ne sont pas supportées par Windows XP,  
-3) Les versions VC13,  VC14 et VC15 sont obligatoires pour PHP7,  
-4) La version VC14 a été remplacée par VC15.
+1. Les versions VC9, VC10 et VC11 sont obligatoires,  
+2. Les versions VC11, VC13 et VC15 ne sont pas supportées par Windows XP,  
+3. Les versions VC13,  VC14 et VC15 sont obligatoires pour PHP7,  
+4. La version VC14 a été remplacée par VC15.
 
 #### Installation
 
@@ -104,16 +104,16 @@ Première étape, trouvez-vous un **nom de domaine**, il s’agit de l’adresse
 
 Le nom de domaine devra être disponible, et vous devrez trouver un un nom de domaine correspondant à l’activité de votre site web. Chaque hébergeur vous proposera de vérifier si le nom de domaine est disponible, mais vous pouvez aussi passer par un service tel que [https://www.nom-domaine.fr](https://www.nom-domaine.fr/).
 
-Je vous conseille de bien choisir votre nom de domaine, car il représentera vos activités et pourrait être utilisé pour plein d’autres choses (*logos, cartes de visite, référencement de votre site...*). Il est donc préférable :
+Nous vous conseillons de bien choisir votre nom de domaine, car il représentera vos activités et pourrait être utilisé pour plein d’autres choses (*logos, cartes de visite, référencement de votre site...*). Il est donc préférable :
 
-*   qu’il soit clair et lisible,
-*   qu’il ne dépasse pas les 50 caractères ou 3 mots,
-*   dans le cas ou il serait composé de plusieurs mots, de les séparer par un tiret '-' (*non obligatoire, mais recommandé*),
-*   qu’il ne possède aucun accent ou caractère spécial en dehors de '-' et '_'.
+* Qu’il soit clair et lisible,
+* Qu’il ne dépasse pas les 50 caractères ou 3 mots,
+* Dans le cas ou il serait composé de plusieurs mots, de les séparer par un tiret '-' (*non obligatoire, mais recommandé*),
+* Qu’il ne possède aucun accent ou caractère spécial en dehors de '-' et '_'.
 
 Une fois un nom de domaine trouvé, vous allez devoir l’acheter : il sera ainsi réservé à votre usage personnel.
 
-Je vous recommande de réserver votre nom de domaine au moment ou vous choisirez votre offre d’hébergement. Dans le cas d’un hébergement gratuit, il sera limité. Et dans le cas d’un hébergement payant, les hébergeurs ont tendance à vous l’offrir la première année (*économie <3*).
+Nous vous recommandons de réserver votre nom de domaine au moment ou vous choisirez votre offre d’hébergement. Dans le cas d’un hébergement gratuit, il sera limité. Et dans le cas d’un hébergement payant, les hébergeurs ont tendance à vous l’offrir la première année (*économie <3*).
 
 ### Une offre d’hébergement
 
@@ -133,11 +133,11 @@ Il existe de nombreux types d’offres d’hébergement. Pour ne mentionner que 
 
 *Ces nombres sont représentatifs et peuvent varier en fonction de la quantité d’espace disponible, de données, de pages, d’utilisateurs, du CMS...
 
-Le conseil que je donne généralement est de choisir votre offre d’hébérgement en rapport avec votre projet. Vous pouvez débuter avec une offre gratuite ou standard, puis en fonction du trafic que générera votre activité, monter en gamme pour assurer votre service en ligne.
+Le conseil que nous donnons généralement est de choisir votre offre d’hébérgement en rapport avec votre projet. Vous pouvez débuter avec une offre gratuite ou standard, puis en fonction du trafic que générera votre activité, monter en gamme pour assurer votre service en ligne.
 
 ### Un hébergeur
 
-Comme je vous l’ai précédemment indiqué, il y a de nombreux hébergeurs. Nous vous proposons ici une liste non exhaustive que vous pourrez complèter en faisant vos propres recherches sur internet (*avec les mots clés suivants : hébergement, site web, gratuit...*)
+Comme nous vous l’avons précédemment indiqué, il y a de nombreux hébergeurs. Nous vous proposons ici une liste non exhaustive que vous pourrez complèter en faisant vos propres recherches sur internet (*avec les mots clés suivants : hébergement, site web, gratuit...*)
 
 Nous vous conseillons de les comparer afin de trouver le plus adapté pour votre site :
 
