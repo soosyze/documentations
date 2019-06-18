@@ -14,7 +14,7 @@ Pour accéder au formulaire de connexion, cliquez sur le lien **_Connexion_** da
 
 ![Screenshot de la page de connexion de SoosyzeCMS](/assets/user/soosyze-user_login-desktop.png)
 
-Saisissez votre e-mail et le mot de passe que vous avez choisi lors de l’installation dans les champs correspondants, puis cliquez sur **_Valider_**. 
+Saisissez votre e-mail et le mot de passe que vous avez choisi lors de l’installation dans les champs correspondants, puis cliquez sur **_Se connecter_**. 
 
 * Si votre connexion est acceptée, vous serez redirigé vers la page de votre compte utilisateur,
 * Si votre connexion échoue, un message vous en avertira.
@@ -25,7 +25,7 @@ Saisissez votre e-mail et le mot de passe que vous avez choisi lors de l’insta
 
 ### Configuer votre compte utilisateur
 
-Une fois connecté, cliquez sur l’onglet **_Utilisateur_** de votre menu d’administration, il s’agit de la page d’édition du compte utilisateur.
+Une fois connecté, cliquez sur l’onglet **_Éditer_**, il s’agit de la page d’édition du compte utilisateur.
 
 `GET ?user/1/edit`
 
@@ -46,6 +46,10 @@ Vous recevrez un e-mail vous donnant la marche à suivre pour changer votre mot 
 ## Configurer votre site
 
 Pour vous rendre au panneau de configuration, cliquez sur le lien **_Configuration_** de votre menu d’administration.
+Chaque onglet correspond à un type de configuration. Par défaut le CMS possède les onglets
+
+* **_Système_** pour les configurations global,
+* **_Utilisateur_** pour les configurations d'inscriptions.
 
 `GET ?admin/config`
 
@@ -53,16 +57,17 @@ Pour vous rendre au panneau de configuration, cliquez sur le lien **_Configurati
 
 1. **E-mail du site** : mail utilisé pour la configuration générale, pour vos contacts (*pour la récupération de votre mot de passe...*),
 2. **Mettre le site en maintenance** : empêche les utilisateurs non connectés d’accéder à votre site,
-3. **Thème du site** : liste d’affichages disponibles pour votre site,
-4. **Thème d’administration du site** : liste d’affichages disponibles pour l’administration votre site,
-5. **Logo** : Champ de téléchargement pour votre logo,
-6. **Page d’accueil par defaut** : le lien du contenu affiché en page d’accueil de votre site,
-7. **Page 403** par défaut (*accès refusé*) : lien du contenu affiché si un utilisateur accède à une page qui lui est interdite,
-8. **Page 404** par défaut (*page non trouvée*) : lien du contenu affiché si un utilisateur accède à une page qui n’existe pas,
-9. **Titre du site** : Le titre principal de votre site apparait aussi dans le titre de la fenêtre de votre navigateur,
-10. **Description** : vous aide à votre référencement et s’affiche dans les moteurs de recherche,
-11. **Mots-clés** : vous aide au référencement de votre site dans les moteurs de recherche,
-12. **Favicon** : Champ de téléchargement pour votre favicon (*image à gauche du titre de la fenêtre de votre navigateur*).
+3. **Rendre les URL propres** : simplifie les URL du site en masquant le paramètre `?q=`
+4. **Thème du site** : liste d’affichages disponibles pour votre site,
+5. **Thème d’administration du site** : liste d’affichages disponibles pour l’administration votre site,
+6. **Logo** : Champ de téléchargement pour votre logo,
+7. **Page d’accueil par defaut** : le lien du contenu affiché en page d’accueil de votre site,
+8. **Page 403** par défaut (*accès refusé*) : lien du contenu affiché si un utilisateur accède à une page qui lui est interdite,
+9. **Page 404** par défaut (*page non trouvée*) : lien du contenu affiché si un utilisateur accède à une page qui n’existe pas,
+10. **Titre du site** : Le titre principal de votre site apparait aussi dans le titre de la fenêtre de votre navigateur,
+11. **Description** : vous aide à votre référencement et s’affiche dans les moteurs de recherche,
+12. **Mots-clés** : vous aide au référencement de votre site dans les moteurs de recherche,
+13. **Favicon** : Champ de téléchargement pour votre favicon (*image à gauche du titre de la fenêtre de votre navigateur*).
 
 À la fin de vos modifications, cliquez sur **_Enregistrer_** en base du formulaire pour les valider.
 
@@ -80,7 +85,7 @@ Exemple : le module News utilise le module Node, donc Node **est requis** par Ne
 
 ### Installer un module
 
-1. Téléchargez parmi [les modules contributeurs](https://github.com/soosyze-extension) celui que vous souhaitez installer,
+1. Téléchargez parmi [les modules contributeurs](https://soosyze.com/download/modules) celui que vous souhaitez installer,
 2. Connectez-vous à votre serveur et rendez-vous dans le répertoire contenant SoosyzeCMS,
 3. Rendez-vous dans le repértoire **app/modules** et déposez le module téléchargé, décompressé de son archive,
 4. Allez sur la page de gestion de vos modules sur votre site,

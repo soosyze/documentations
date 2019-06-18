@@ -14,7 +14,7 @@ Pour commencer, vous devez choisir entre :
 
 Quel que soit le système d’exploitation (*Windows, Mac, Linux...*) que vous utilisez, vous devrez installer un **serveur HTTP** (*serveur web*) et **PHP** (*langage de développement utilisé pour Soosyze*).
 
-Pour information, Soosyze CMS supporte **Apache 2.2+** et **Nginx 1.0+**, qui sont deux des serveurs web les plus utilisés.
+Pour information, Soosyze CMS supporte **Apache 2.2+** et **Nginx 1.0+**, qui sont deux des serveurs web les plus utilisés ([utilisés dans plus de 80% des infrastructures d'hébergement](https://w3techs.com/technologies/overview/web_server/all)).
 
 ### Installation de votre serveur : Wamp pour Windows
 

@@ -2,7 +2,7 @@
 
 Si vous avez suivi le chapitre précédent, vous savez qu’il existe deux façons d’héberger votre site web. Cette distinction se fera aussi pour l’installation du CMS.
 
-Dans un premier temps, [téléchargez l’archive de SoosyzeCMS sur votre ordinateur](https://github.com/soosyze/soosyze/releases/download/1.0.0-alpha4.1/soosyze.zip).
+Dans un premier temps, [téléchargez l’archive de la dernière version SoosyzeCMS sur votre ordinateur](https://github.com/soosyze/soosyze/releases/latest/download/soosyze.zip).
 
 Cette archive contient les fichiers source de l’application. Vous devez donc déposer ces fichiers en local ou en ligne. Une fois les fichiers source au bon endroit, vous allez enfin pouvoir installer le CMS.
 
@@ -11,15 +11,15 @@ Cette archive contient les fichiers source de l’application. Vous devez donc d
 Dans le chapitre précédent, nous avons expliqué comment installer WampServer 3 (*WAMP*) pour faire fonctionner votre site en local. Ici, nous verrons où déposer Soosyze dans WAMP pour le faire fonctionner.
 
 1. Lancez WAMP,
-2. Rendez-vous à la racine du disque sur lequel vous avez installé WAMP, généralement C:\ ou D:\ ,
-3. Allez dans le répertoire \wamp (*ou \wamp64*),
-4. Et enfin dans le dossier \www,
+2. Rendez-vous à la racine du disque sur lequel vous avez installé WAMP, généralement `C:\` (*ou `D:\`*) ,
+3. Allez dans le répertoire `\wamp` (*ou `\wamp64`*),
+4. Et enfin dans le dossier `\www`,
 5. Copiez/Collez l’archive de SoosyzeCMS dans ce dossier,
 6. Décompressez l’archive.
 
-Le dossier \www est le point d’entrée de vos applications web sous WAMP, tous les fichiers sources doivent être dans ce répértoire.
+Le dossier `\www` est le point d’entrée de vos applications web sous WAMP, tous les fichiers sources doivent être dans ce répértoire.
 
-Par défaut, les fichiers sources de SoosyzeCMS sont contenus dans le répértoire \Soosyze : à vous d’organiser vos projets comme bon vous semble.
+Par défaut, les fichiers sources de SoosyzeCMS sont contenus dans le répértoire `\soosyze` : à vous d’organiser vos projets comme bon vous semble.
 
 [Vous voilà prêts à installer SoosyzeCMS](#installer-le-cms).
 
@@ -36,7 +36,7 @@ Vous devez au préalable installer un client FTP.
 
 Il en existe plusiseurs, mais nous nous focaliserons sur le logiciel FileZilla. C’est un logiciel très répandu et disponible pour Windows, Mac OS et GNU/Linux.
 
-1. Rendez-vous sur le [site de FileZilla](https://dillinger.io/https://filezilla-project.org/),
+1. Rendez-vous sur le [site de FileZilla](https://filezilla-project.org),
 2. Téléchargez FileZilla Client,
 3. Installez-le et Lancez le logiciel.
 

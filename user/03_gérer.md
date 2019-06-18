@@ -15,7 +15,7 @@ Si vous comprenez ça, vous avez compris plus de 50% du fonctionnement d’un CM
 
 Rendez-vous sur la page de gestion de vos contenus en cliquant sur le lien **_Contenu_** dans le menu administrateur. Cette page visualise tous les contenus de votre site, leurs dates de création, de modifiaction et leurs états de publication.
 
-**Pour info !** Vos contenus sont gérés par le module **Node** du SoosyzeCMS, il permet **créer des types de contenus.** Les types de contenus permettent de créer et mettre en forme vos données, par exemple une **page** ou un **article**.
+**Pour info !** Vos contenus sont gérés par le module **Node** de SoosyzeCMS, il permet **créer des types de contenus.** Les types de contenus permettent de créer et mettre en forme vos données, par exemple une **page** ou un **article**.
 
 `GET ?admin/content`
 
@@ -84,3 +84,59 @@ Vous serez redirigé vers le formulaire d’édition du lien. Modifiez les champ
 ### Supprimer un lien
 
 Depuis la page de gestion de vos menus, cliquez sur **_Supprimer_** dans la colonne actions du lien souhaité.
+
+## Gérer les utilisateurs
+
+Rendez-vous sur la page de gestion des comptes utilisateurs en cliquant sur le lien **_Utilisateur_** dans le menu d’administrateur. 
+Depuis cette interface, vous pouvez voir tous les utilisateurs.
+
+`GET ?admin/user`
+
+![Screenshot de la page de gestion des utilisateurs de SoosyzeCMS](/assets/user/soosyze-user_management-desktop.png)
+
+
+### Créer un utilisateur
+
+Cliquez sur lien **_Ajouter un utilisateur_** en haut à gauche de la page de gestion des comptes utilisateurs.
+
+Vous serez redirigé vers le formulaire de création d'utilisateur. Remplissez les champs correspondants et cliquez sur **_Enregistrer_**.
+
+`GET ?user`
+
+![Screenshot de la page de création d'un utilisateur de SoosyzeCMS](/assets/user/soosyze-user_create-desktop.png)
+
+### Modifier un utilisateur
+
+Depuis la page de gestion des comptes utilisateurs, cliquez sur **_Editer_** dans la colonne *Actions* de l'utilisateur souhaité.
+
+Vous serez redirigé vers le formulaire d'édition de l'utilisateur. Modifiez les champs souhaités et cliquez sur **_Enregistrer_**.
+
+`GET ?user/:id/edit`
+
+### Supprimer un utilisateur
+
+Depuis la page de gestion des comptes utilisateurs, cliquez sur **_Supprimer_** dans la colonne actions du lien souhaité.
+
+Vous serez redirigé vers le formulaire de supression de compte utilisateur. Cliquez sur **_Supprimer le compte_**.
+
+`GET ?user/:id/delete`
+
+## Gérer les rôles
+
+Un utilisateur peut posséder plusieurs rôles utilisateurs.
+Par défaut il possède le rôle "Utilisateur connectée" (l'équivalent de membre du site). Les rôles fonctionnent sur le principe de CRUD.
+Depuis la page de gestion des comptes utilisateurs, cliquez sur **_Administrer les rôles_**. Vous aurez les interfaces de création, modification et suppression de rôles.
+
+![Screenshot de la page de création des rôles de SoosyzeCMS](/assets/user/soosyze-user_roles-desktop.png)
+
+`GET ?admin/user/role`
+
+## Gérer les permissions
+
+Depuis la page de gestion des comptes utilisateurs, cliquez sur **_Administrer les permissions_**.
+Les permissions déterminent quel(s) rôle(s) à les droits de voir, créer, modifier, supprimer... selon les différentes fonctionnalités du site.
+
+Par exemple, le module **Contact** propose la permission _Utiliser le formulaire de contact général_.
+Cette permission autorise par défaut tous les rôles à voir le formulaire de contact et à le valider.
+
+![Screenshot de la page de gestion des permissions de SoosyzeCMS](/assets/user/soosyze-user_permission-desktop.png)
