@@ -17,7 +17,7 @@ Rendez-vous sur la page de gestion de vos contenus en cliquant sur le lien **_Co
 
 **Pour info !** Vos contenus sont gérés par le module **Node** de SoosyzeCMS, il permet **créer des types de contenus.** Les types de contenus permettent de créer et mettre en forme vos données, par exemple une **page** ou un **article**.
 
-`GET ?admin/content`
+`GET ?q=admin/content`
 
 ![Screenshot de la page de gestion des contenus de SoosyzeCMS](/assets/user/soosyze-node_index-desktop.png)
 
@@ -27,7 +27,7 @@ Cliquez sur le bouton **_Ajouter du contenu_** en haut à gauche de la page de g
 
 Vous serez redirigé à la page des types de contenus. Par défaut vous avez le choix entre créer une **Page** pour votre site ou un **Article**.
 
-`GET ?node/add`
+`GET ?q=node/add`
 
 ![Screenshot de la page des types de contenu de SoosyzeCMS](/assets/user/soosyze-node_add-desktop.png)
 
@@ -35,8 +35,8 @@ Cliquez sur le titre de l’un d’entre eux pour accéder au formulaire de cré
 
 Remplissez les champs correspondants au format texte ou HTML, puis cliquez sur **_Enregistrer_** et vous reviendrez à la page de gestion de vos contenus.
 
-`GET ?node/add/page`
-`GET ?node/add/article`
+`GET ?q=node/add/page`
+`GET ?q=node/add/article`
 
 Attention, le type de contenu article ne fonctionne que si le module News est activé !
 
@@ -44,7 +44,7 @@ Attention, le type de contenu article ne fonctionne que si le module News est ac
 
 Pour modifier le contenu, rendez-vous sur la page de gestion de contenus et cliquez sur le bouton **_Editer_**  dans la colonne _Action_ du tableau des contenus.
 
-`GET ?node/:id/edit`
+`GET ?q=node/:id/edit`
 
 ### Supprimer du contenu
 
@@ -55,11 +55,11 @@ Pour supprimer le contenu, rendez-vous sur la page de gestion de contenus et cli
 Rendez-vous sur la page de gestion du menu en cliquant sur le lien **_Menu_** dans le menu d’administrateur. Depuis cette interface, vous pouvez :
 
 1. Activer ou désactiver les liens,
-2. Changer la position d’affichage du lien à partir de la colonne _Poids_ (*ou déplacant les liens à l'aide de votre souris.*),
+2. Changer la position d’affichage en glissant/déposant le lien,
 
 Une fois les modifications apportées, cliquez sur **_Enregistrer_** en bas de la page de gestion du menu.
 
-`GET ?menu/main-menu`
+`GET ?q=menu/main-menu`
 
 ![Screenshot de la page de gestion des menu de SoosyzeCMS](/assets/user/soosyze-menu_show-desktop.png)
 
@@ -69,7 +69,7 @@ Cliquez sur le bouton **_Ajouter un lien_** en haut à gauche de la page de gest
 
 Vous serez redirigé vers le formulaire d’ajout de lien. Remplissez les champs correspondants et cliquez sur **_Enregistrer_**.
 
-`GET ?menu/main-menu/link/add`
+`GET ?q=menu/main-menu/link/add`
 
 ![Screenshot de la page d’ajout de lien de menu de SoosyzeCMS](/assets/user/soosyze-menu_link_create-desktop.png)
 
@@ -79,7 +79,7 @@ Depuis la page de gestion de vos menus, cliquez sur **_Editer_** dans la colonne
 
 Vous serez redirigé vers le formulaire d’édition du lien. Modifiez les champs souhaités et cliquez sur **_Enregistrer_**.
 
-`GET ?menu/main-menu/link/:id/edit`
+`GET ?q=menu/main-menu/link/:id/edit`
 
 ### Supprimer un lien
 
@@ -90,7 +90,7 @@ Depuis la page de gestion de vos menus, cliquez sur **_Supprimer_** dans la colo
 Rendez-vous sur la page de gestion des comptes utilisateurs en cliquant sur le lien **_Utilisateur_** dans le menu d’administrateur. 
 Depuis cette interface, vous pouvez voir tous les utilisateurs.
 
-`GET ?admin/user`
+`GET ?q=admin/user`
 
 ![Screenshot de la page de gestion des utilisateurs de SoosyzeCMS](/assets/user/soosyze-user_management-desktop.png)
 
@@ -101,7 +101,7 @@ Cliquez sur lien **_Ajouter un utilisateur_** en haut à gauche de la page de ge
 
 Vous serez redirigé vers le formulaire de création d'utilisateur. Remplissez les champs correspondants et cliquez sur **_Enregistrer_**.
 
-`GET ?user`
+`GET ?q=user`
 
 ![Screenshot de la page de création d'un utilisateur de SoosyzeCMS](/assets/user/soosyze-user_create-desktop.png)
 
@@ -111,7 +111,7 @@ Depuis la page de gestion des comptes utilisateurs, cliquez sur **_Editer_** dan
 
 Vous serez redirigé vers le formulaire d'édition de l'utilisateur. Modifiez les champs souhaités et cliquez sur **_Enregistrer_**.
 
-`GET ?user/:id/edit`
+`GET ?q=user/:id/edit`
 
 ### Supprimer un utilisateur
 
@@ -119,7 +119,7 @@ Depuis la page de gestion des comptes utilisateurs, cliquez sur **_Supprimer_** 
 
 Vous serez redirigé vers le formulaire de supression de compte utilisateur. Cliquez sur **_Supprimer le compte_**.
 
-`GET ?user/:id/delete`
+`GET ?q=user/:id/delete`
 
 ## Gérer les rôles
 
@@ -129,7 +129,7 @@ Depuis la page de gestion des comptes utilisateurs, cliquez sur **_Administrer l
 
 ![Screenshot de la page de création des rôles de SoosyzeCMS](/assets/user/soosyze-user_roles-desktop.png)
 
-`GET ?admin/user/role`
+`GET ?q=admin/user/role`
 
 ## Gérer les permissions
 

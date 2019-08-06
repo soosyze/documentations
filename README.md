@@ -2,10 +2,18 @@
 
 # Documentation Soosyze
 
-* [Site](https://soosyze.com)
-* [Démo](https://demo.soosyze.com)
-* [Forum](https://community.soosyze.com)
-* [PHP Doc](https://api.soosyze.com)
+* :globe_with_meridians: [Site](https://soosyze.com)
+* :eyes: [Démo](https://demo.soosyze.com)
+* :dizzy: [Extensions et thèmes](https://github.com/soosyze-extension)
+* :speech_balloon: [Forum](https://community.soosyze.com)
+* :mortar_board: [Docuementations](https://github.com/soosyze/documentations)
+* :green_book: [PHP Doc](https://api.soosyze.com)
+
+Vous pouvez également nous trouver sur les réseaux :
+
+* :busts_in_silhouette: [Mastodon](https://mamot.fr/@soosyze)
+* :telephone_receiver: [Discord](https://discordapp.com/invite/parFfTt)
+* :newspaper: [Diaspora](https://framasphere.org/people/10978ab0dd6301362e322a0000053625)
 
 ## Guide de l’utilisateur de SoosyzeCMS
 

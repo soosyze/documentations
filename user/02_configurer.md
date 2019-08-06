@@ -10,7 +10,7 @@ Après l’installation de votre site, vous êtes redirigés vers la page d’ac
 
 Pour accéder au formulaire de connexion, cliquez sur le lien **_Connexion_** dans le menu utilisateur en bas à droite de votre site (*accessible à n’importe quelle page*).
 
-`GET ?user/login`
+`GET ?q=user/login`
 
 ![Screenshot de la page de connexion de SoosyzeCMS](/assets/user/soosyze-user_login-desktop.png)
 
@@ -19,7 +19,7 @@ Saisissez votre e-mail et le mot de passe que vous avez choisi lors de l’insta
 * Si votre connexion est acceptée, vous serez redirigé vers la page de votre compte utilisateur,
 * Si votre connexion échoue, un message vous en avertira.
 
-`GET ?user/1`
+`GET ?q=user/1`
 
 ![Screenshot de la page de profil utilisateur de SoosyzeCMS](/assets/user/soosyze-user_show-desktop.png)
 
@@ -27,7 +27,7 @@ Saisissez votre e-mail et le mot de passe que vous avez choisi lors de l’insta
 
 Une fois connecté, cliquez sur l’onglet **_Éditer_**, il s’agit de la page d’édition du compte utilisateur.
 
-`GET ?user/1/edit`
+`GET ?q=user/1/edit`
 
 ![Screenshot de la page d’edition de l’utilisateur de SoosyzeCMS](/assets/user/soosyze-user_edit-desktop.png)
 
@@ -37,7 +37,7 @@ Vous pouvez modifier les informations y figurant. La modification de votre mot d
 
 Si vous avez oublié votre mot de passe, cliquez sur le lien **_Mot de passe perdu ?_** en bas du formulaire de connexion. vous serez redirigé vers un formulaire.
 
-`GET ?user/relogin`
+`GET ?q=user/relogin`
 
 ![Screenshot de la page de demande de nouveau mot de passe de SoosyzeCMS](/assets/user/soosyze-user_relogin-desktop.png)
 
@@ -48,10 +48,11 @@ Vous recevrez un e-mail vous donnant la marche à suivre pour changer votre mot 
 Pour vous rendre au panneau de configuration, cliquez sur le lien **_Configuration_** de votre menu d’administration.
 Chaque onglet correspond à un type de configuration. Par défaut le CMS possède les onglets
 
+* **_Blog_** pour les configurations des news,
 * **_Système_** pour les configurations global,
 * **_Utilisateur_** pour les configurations d'inscriptions.
 
-`GET ?admin/config`
+`GET ?q=admin/config`
 
 ![Screenshot de la page de configuration de SoosyzeCMS](/assets/user/soosyze-configuration-desktop.png)
 
@@ -75,9 +76,9 @@ Chaque onglet correspond à un type de configuration. Par défaut le CMS possèd
 
 Pour accéder à la page de vos modules, cliquez sur le lien **_Modules_** dans le menu d’administration.
 
-`GET ?admin/modules`
+`GET ?q=admin/modules`
 
-![Screenshot de la page d’e gestion des modules de SoosyzeCMS](/assets/user/soosyze-modules-desktop.png)
+![Screenshot de la page de gestion des modules de SoosyzeCMS](/assets/user/soosyze-modules-desktop.png)
 
 Un module **requis** signifie que ce module est utilisé par un autre module déja actif.
 

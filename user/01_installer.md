@@ -2,26 +2,15 @@
 
 Si vous avez suivi le chapitre précédent, vous savez qu’il existe deux façons d’héberger votre site web. Cette distinction se fera aussi pour l’installation du CMS.
 
-Dans un premier temps, [téléchargez l’archive de la dernière version SoosyzeCMS sur votre ordinateur](https://github.com/soosyze/soosyze/releases/latest/download/soosyze.zip).
-
-Cette archive contient les fichiers source de l’application. Vous devez donc déposer ces fichiers en local ou en ligne. Une fois les fichiers source au bon endroit, vous allez enfin pouvoir installer le CMS.
-
 ## Déposer le code source en local
 
-Dans le chapitre précédent, nous avons expliqué comment installer WampServer 3 (*WAMP*) pour faire fonctionner votre site en local. Ici, nous verrons où déposer Soosyze dans WAMP pour le faire fonctionner.
+### En local sur Linux
 
-1. Lancez WAMP,
-2. Rendez-vous à la racine du disque sur lequel vous avez installé WAMP, généralement `C:\` (*ou `D:\`*) ,
-3. Allez dans le répertoire `\wamp` (*ou `\wamp64`*),
-4. Et enfin dans le dossier `\www`,
-5. Copiez/Collez l’archive de SoosyzeCMS dans ce dossier,
-6. Décompressez l’archive.
+* [Déposer le code source en local dans Apache pour Ubuntu/Debian](/user/01_installer_linux.md).
 
-Le dossier `\www` est le point d’entrée de vos applications web sous WAMP, tous les fichiers sources doivent être dans ce répértoire.
+### En local sur Windows
 
-Par défaut, les fichiers sources de SoosyzeCMS sont contenus dans le répértoire `\soosyze` : à vous d’organiser vos projets comme bon vous semble.
-
-[Vous voilà prêts à installer SoosyzeCMS](#installer-le-cms).
+* [Déposer le code source en local dans WampServeur 3(Apache) pour Windows](/user/01_installer_windows.md).
 
 ## Déposer le code source en ligne
 
