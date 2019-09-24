@@ -72,8 +72,12 @@ Maintenant que les fichiers sources sont au bon endroit, ouvrez un navigateur we
 * En local, [127.0.0.1/Soosyze](http://127.0.0.1/Soosyze),
 * En ligne, votre nom de domaine.
 
-La page suivante se présentera à vous. Remplissez tous les champs et cliquez sur **_Installer_**.
+La page suivante se présentera à vous. Sélectionner votre langue, remplissez tous les champs et cliquez sur **_Suivant_**.
 
-![Screenshot de la page d’instalaltion de SoosyzeCMS](/assets/user/install-desktop.png)
+![Screenshot de la page d’instalaltion de SoosyzeCMS](/assets/user/install-step_1.png)
+
+Puis créer votre compte utilisateur et cliquez sur **_Installer_**.
+
+![Screenshot de la page d’instalaltion de SoosyzeCMS](/assets/user/install-step_2.png)
 
 Et voilà, le CMS est installé.

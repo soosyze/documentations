@@ -3,7 +3,7 @@
 Dans le chapitre précédent, nous avons expliqué comment installer Apache et PHP pour faire fonctionner votre site en local. Ici, nous verrons où déposer Soosyze pour le faire fonctionner.
 Mais avant nous allons nous assurer que vous avez tous les pré requis pour le bon fonctionnement de Soosyze.
 
-#Pre requis
+## Pré-requis
 
 Soosyze requière plusieurs extensions nécessaires à son fonctionnement :
 
@@ -114,7 +114,7 @@ Dernière étape avant que vous puissiez enfin utiliser Soosyze. Il faut savoir 
 Commencer par lancer la commande suivante qui attribue à l'utilisateur `www:data` les droits du groupe `www:data` sur le répertoire du CMS de façon récursive (*pour appliquer les droits à tous ses sous dossiers*):
 
 ```
-sudo chwod -R www-data:www-data /var/www/html/soosyze 
+sudo chown -R www-data:www-data /var/www/html/soosyze 
 ```
 
 Ajouter des droits d'écriture au groupe sur le répertoire pour que l'utilisateur www-data puisse écrire dedans. Lancer la commande suivante :
