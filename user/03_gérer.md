@@ -19,7 +19,7 @@ Rendez-vous sur la page de gestion de vos contenus en cliquant sur le lien **_Co
 
 `GET ?q=admin/nodes`
 
-![Screenshot de la page de gestion des contenus de SoosyzeCMS](/assets/user/soosyze-node_index.png)
+![Screenshot de la page de gestion des contenus de SoosyzeCMS](/assets/user/soosyze-node_admin.png)
 
 ### Créer du contenu
 
@@ -61,7 +61,7 @@ Une fois les modifications apportées, cliquez sur **_Enregistrer_** en bas de l
 
 `GET ?q=admin/menu/main-menu`
 
-![Screenshot de la page de gestion des menu de SoosyzeCMS](/assets/user/soosyze-menu_show.png)
+![Screenshot de la page de gestion des menu de SoosyzeCMS](/assets/user/soosyze-menu_admin.png)
 
 ### Créer un lien
 
@@ -105,6 +105,8 @@ Vous serez redirigé vers le formulaire de création d'utilisateur. Remplissez l
 
 ![Screenshot de la page de création d'un utilisateur de SoosyzeCMS](/assets/user/soosyze-user_create.png)
 
+Le nouvel utilisateur peut se connecter uniquement si son statut et activé.
+
 ### Modifier un utilisateur
 
 Depuis la page de gestion des comptes utilisateurs, cliquez sur **_Editer_** dans la colonne *Actions* de l'utilisateur souhaité.
@@ -140,6 +142,8 @@ Les permissions déterminent quel(s) rôle(s) à les droits de voir, créer, mod
 Par exemple, le module **Contact** propose la permission _Utiliser le formulaire de contact général_.
 Cette permission autorise par défaut tous les rôles à voir le formulaire de contact et à le valider.
 
+Autre exemple, vous pouvez choisir quels sont les rôles utilisateurs qui peuvent utiliser le thème d'administration.
+
 ![Screenshot de la page de gestion des permissions de SoosyzeCMS](/assets/user/soosyze-user_permission.png)
 
 ## Gérer les blocs
@@ -174,3 +178,76 @@ Dans le cas ou un module d'éditeur de texte est activé (par exemple [Trumbowyg
 ### Supprimer les blocs
 
 Pour supprimer vos blocs, placer votre curseur au-dessus d'un bloc puis cliquer sur l'icône poubelle qui vient d'apparaître.
+
+## Gérer les fichiers
+
+La gestion des fichiers peut-être un risque pour la sécurité de votre site, c'est pour cette raison qu'ils utilisent une forme de permissions plus précise que celles de bases.
+
+### Gérer les permissions de fichiers
+
+Rendez-vous sur la page de gestion des comptes utilisateurs en cliquant sur le lien **_Utilisateur_** dans le menu d'administrateur, puis sur le lien **_Administrer les profils de fichiers__**.
+
+`GET ?q=admin/user/permission/filemanager`
+
+![Screenshot de la page des blocs de SoosyzeCMS](/assets/user/soosyze-filemanager_profil.png)
+
+Vous pouvez ajouter, modifier ou supprimer des profils de fichiers :
+
+Un profil est défini par :
+
+* Le chemin ou se situera les fichiers (DOIT toujours commencer par un `/`),
+* L'inclusion des sous répertoires,
+* Les rôles utilisateurs,
+* Les droits d'ajouter, modifier et supprimer des répertoires,
+* La taille limite de données par répertoire (exprimé en mega octets),
+* Les droits d'ajouter, modifier, supprimer, télécharger et copier le lien des fichiers,
+* La taille maximum pour l'upload des fichiers (exprimé en mega octets),
+* Et les extensions de fichiers.
+
+Vous avez également accès à la variable dynamique {{user_id}} qui sera remplacée dynamiquement par l'identifiant de l'utilisateur connecté.
+
+Si les sous répertoires NE SONT PAS inclues, les droits d'ajout, modification et suppression ne peuvent fonctionner.
+Si les sous répertoires SONT inclues, alors ils seront prises en compte dans la taille limite de données du répertoire parent.
+
+### Exemple de conflit entre profils de fichiers
+
+Exemple :
+
+| Profil 1                |                                                           |
+|-------------------------|-----------------------------------------------------------|
+| Répertoire              | `/test`                                                   |
+| Sous répértoire inclue  | `TRUE`                                                    |
+| Rôles                   | **Admin**(`poids 3`), **Utilisateur connecté**(`poids 2`) |
+| Taille max des fichiers | `5Mo`                                                     |
+| Poids                   | `1`                                                       |
+
+| Profil 2                |                                     |
+|-------------------------|-------------------------------------|
+| Répertoire              | `/test`                             |
+| Sous répértoire inclue  | `TRUE`                              |
+| Rôles                   | **Utilisateur connecté**(`poids 2`) |
+| Taille max des fichiers | `1Mo`                               |
+| Poids                   | `2`                                 |
+
+Ces 2 profils entre en conflits puisqu'ils pointent sur le même répertoire.
+
+Pour résoudre ces problèmes l'algorithme calcule :
+
+* Quels profils correspond aux rôles utilisateurs,
+* Quels rôles utilisateurs à le plus de poids,
+* Quels profils à le plus de poids.
+
+Donc, pour un administrateur qui possède également le rôle d'utilisateur connectée; le Profil 1 sera prioritaire puisque son rôle est plus fort. 
+Et pour un utilisateur classique avec le rôle d'utilisateur connecté; le Profil 2 sera prioritaire puisque le poids du profil est plus fort.
+
+### Parcourir et utiliser les fichiers
+
+Rendez-vous sur la page de gestion des comptes utilisateurs en cliquant sur le lien **_Utilisateur_** dans le menu d'administration.
+Puis sur le lien **_Administrer les profils de fichiers__**.
+
+`GET ?q=admin/filemanager/show`
+
+![Screenshot de la page des blocs de SoosyzeCMS](/assets/user/soosyze-filemanager_show.png)
+
+Les pages, les fichiers, la zone de téléchargement, répertoire et boutons d'actions s'affichent en fonction de vos profils de fichiers.
+Pour vous déplacer d'un répertoire à l'autre cliquez sur son l'icône

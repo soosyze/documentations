@@ -8,7 +8,7 @@ Après l’installation de votre site, vous êtes redirigés vers la page d’ac
 
 ### Connexion utilisateur
 
-Pour accéder au formulaire de connexion, cliquez sur le lien **_Connexion_** dans le menu utilisateur en bas à droite de votre site (*accessible à n’importe quelle page*).
+Pour accéder au formulaire de connexion, cliquez sur le lien **_Connexion_** dans le menu utilisateur dans le pied de page de votre site (*accessible à n’importe quelle page*).
 
 `GET ?q=user/login`
 
@@ -48,9 +48,20 @@ Vous recevrez un e-mail vous donnant la marche à suivre pour changer votre mot 
 Pour vous rendre au panneau de configuration, cliquez sur le lien **_Configuration_** de votre menu d’administration.
 Chaque onglet correspond à un type de configuration. Par défaut le CMS possède les onglets
 
+* **_FileManager_** pour les configurations des fichiers,
 * **_News_** pour les configurations des news,
 * **_Système_** pour les configurations global,
 * **_Utilisateur_** pour les configurations utilisateur.
+
+### Configurations des fichiers
+
+`GET ?q=admin/config/filemanager`
+
+![Screenshot de la page de configuration de SoosyzeCMS](/assets/user/soosyze-config_filemanager.png)
+
+1. **Comportement des transferts de fichiers** : par défaut "Remplacer le fichier par le nouveau".
+
+À la fin de vos modifications, cliquez sur **_Enregistrer_** en base du formulaire pour les valider.
 
 ### Configurations des news
 
@@ -94,12 +105,16 @@ Chaque onglet correspond à un type de configuration. Par défaut le CMS possèd
 1. **Protection des routes de connexion** : Dans le cas ou le site est géré par une équipe restreinte, pour mieux protéger vos formulaire de connexion vous pouvez choisir un suffixe à l'URL.Exemple : Ab1P-9eM_s8Y = user/login/Ab1P-9eM_s8Y,
 2. **Page de redirection après connexion** : Définit la route de redirection après la connexcion des utilisateurs,
 3. **Ouvrir l'inscription** : Donne l'accès au formulaire d'inscription,
-4. **Ouvrir la récupération de mot de passe** : Donne l'accès au formulaire de récupération de mot de passe (très utile pour éviter le SPAM si le site est géré par un seul utilisateur),
-5. **Ajout d'un bouton pour visualiser les mots de passe** : Permet aux utilisateurs de voir leurs mots de passe,
-6. **Longueur minimum** : Nombre de caractère minimum des mots de passes (minimum par défaut 8),
-7. **Nombre de caractères majuscule** : Nombre de caractère majuscule de A à Z,
-8. **Nombre de caractères numérique** : Nombre de caractère numérique de 0 à 9,
-9. **Nombre de caractères spéciaux** Nombre de caractère spéciaux (tous les caractères non alpha numérique et underscore).
+4. **Activer les CGU** : Contraint les nouveau utilisateur à accepter les _conditions générale d'utilisation_ du site,
+5. **Page des CGU** : La page de vos CGU,
+6. **Activer la politique de confidentialité des données** : Contraint les nouveau utilisateur à accepter la _politique de confidentialité des données_ du site,
+7. **Page RGPD** : La page de la politique de confidentialité des données,
+8. **Ouvrir la récupération de mot de passe** : Donne l'accès au formulaire de récupération de mot de passe (très utile pour éviter le SPAM si le site est géré par un seul utilisateur),
+9. **Ajout d'un bouton pour visualiser les mots de passe** : Permet aux utilisateurs de voir leurs mots de passe,
+10. **Longueur minimum** : Nombre de caractère minimum des mots de passes (minimum par défaut 8),
+11. **Nombre de caractères majuscule** : Nombre de caractère majuscule de A à Z,
+12. **Nombre de caractères numérique** : Nombre de caractère numérique de 0 à 9,
+13. **Nombre de caractères spéciaux** Nombre de caractère spéciaux (tous les caractères non alpha numérique et underscore).
 
 Si le nombre de caractère majuscule, numérique et spéciaux dépasse la longueur minimum alors celle-ci n'est plus valable.
 
