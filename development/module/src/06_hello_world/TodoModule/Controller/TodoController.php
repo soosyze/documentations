@@ -1,16 +1,12 @@
 <?php
 
-// modules/TodoModule/Controller/TodoController.php
-
-namespace TodoModule\Controller;
-
-define('CONFIG_TODO', MODULES_CONTRIBUED . 'TodoModule' . DS . 'Config' . DS);
+namespace SoosyzeExtension\TodoModule\Controller;
 
 class TodoController extends \Soosyze\Controller
 {
     public function __construct()
     {
-        $this->pathRoutes = CONFIG_TODO . 'routing.json';
+        $this->pathRoutes = dirname(__DIR__) . '/Config/routes.php';
     }
 
     public function index()

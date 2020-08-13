@@ -19,14 +19,21 @@ Pour faire simple, l’autoloader permet de charger automatiquement vos objets. 
 
 Vous devez donc nommer vos namespaces en fonction de votre arborescence et nommer votre objet de la même manière que votre fichier.
 
-Dans notre cas, l’objet `TodoController` se situe dans un fichier `TodoController.php` et notre namespace `TodoModule\Controller` représente l’emplacement de `TodoController.php`.
+Dans notre cas, l’objet `TodoController` se situe dans un fichier `TodoController.php` et notre namespace `SoosyzeExtension\TodoModule\Controller` représente l’emplacement de `TodoController.php`.
+- `SoosyzeExtension` est défini par l'autoloader du CMS comme étant le répertoire `app)/module`,
+- `TodoModule` le répertoire TodoModule,
+- `Controller` le répertoire Controller.
+
+Ce qui revient à dire que l'objet `TodoController` est contenu dans le fichier `TodoController.php` dans le répertoire `app/module/TodoModule/Controller`
 
 ```php
 <?php
-# modules/TodoModule/Controller/TodoController.php
+# app/modules/TodoModule/Controller/TodoController.php
 
 /* Le namespace doit refléter votre arborescence. */
-namespace TodoModule\Controller;
+namespace SoosyzeExtension\TodoModule\Controller;
+
+use Psr\Http\Message\ServerRequestInterface;
 
 /* Et le nom de la classe doit refléter le nom du fichier. */
 class TodoController extends \Soosyze\Controller { 
@@ -36,7 +43,7 @@ class TodoController extends \Soosyze\Controller {
 
 ## Requête et Réponse
 
-[La recommandation PSR-07 (HTTP Message Interface)](https://www.php-fig.org/psr/psr-7/) permet de représenter le protocole HTTP sous forme d’objet.
+[La recommandation PSR-07](https://www.php-fig.org/psr/psr-7/) (HTTP Message Interface) permet de représenter le protocole HTTP sous forme d’objet.
 
 Pour rappel, le protocole HTTP (*HyperText Transfer Protocol*) est un protocole de communication client-serveur. Pour vulgariser, ce protocole définit la manière selon laquelle une requête doit être envoyée au serveur, et comment le serveur doit renvoyer une réponse.
 
@@ -65,32 +72,31 @@ Nous allons modifier notre contrôleur pour qu’il retourne un objet `Response`
 Ajoutez les composants `Soosyze\Components\Http\Response` et `Soosyze\Components\Http\Stream` au contrôleur `TodoController`. Ensuite, dans la fonction `index()`, ajoutez les lignes suivantes :
 
 ```php
-# modules/TodoModule/Controller/TodoController.php
+# app/modules/TodoModule/Controller/TodoController.php
 
 /* Le namespace doit refléter votre arborescence. */
-namespace TodoModule\Controller;
+namespace SoosyzeExtension\TodoModule\Controller;
 
+use Psr\Http\Message\ServerRequestInterface;
 /* Déclaration des objets du composant HTTP. */
 use Soosyze\Components\Http\Response;
 use Soosyze\Components\Http\Stream;
-
-define("CONFIG_TODO", MODULES_CONTRIBUED . 'TodoModule' . DS . 'Config' . DS);
 
 class TodoController extends \Soosyze\Controller
 {
     public function __construct()
     {
         /* Spécifie le chemin de votre fichier de route. */
-        $this->pathRoutes = CONFIG_TODO . 'routing.json';
+        $this->pathRoutes = dirname(__DIR__) . '/Config/routes.php';
     }
 
     /**
      * La fonction index pour afficher la liste.
      *
-     * @param $request est un objet Request qui rassemble toutes les données
+     * @param $request est un objet ServerRequest qui rassemble toutes les données
      * de la requête HTTP.
      */
-    public function index( $req ){
+    public function index( ServerRequestInterface $req ){
         /** 
          * L’objet Response utilise l’objet Stream comme corps de la réponse.
          * L’objet Stream permet de représenter et manipuler 
@@ -104,7 +110,7 @@ class TodoController extends \Soosyze\Controller
 ```
 
 Vérifions que la fonction soit bien appelée.
-Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/index](http://127.0.0.1/soosyze/?todo/index).
+Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?q=todo/index](http://127.0.0.1/soosyze/?q=todo/index).
 Le résultat est censé être : **Affichage de la liste**
 
 ## RESTful
@@ -114,7 +120,7 @@ Prenons maintenant un exemple bien plus technique. Imaginons que vous fassiez la
 Vous utiliserez probablement des bibliothèques du style Angular ou React (*pour ne citer que ces deux là*), et vous chercherez à ce que le retour de votre contrôleur soit dans un format différent du `plain/text`. Prenons par exemple un retour au format JSON en utilisant l’objet `Response`.
 
 ```php
-public function index( $req ){
+public function index( ServerRequestInterface $req ){
     /* Notre contenu. Ici une chaîne, mais il aurait pu s’agir d’un tableau. */
     $content  = "Affichage de la liste";
     /* Nous ajoutons notre contenu encodé en JSON dans un flux. */
@@ -128,10 +134,19 @@ public function index( $req ){
 ```
 
 Vérifions que la fonction retourne bien du JSON.
-Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/index](http://127.0.0.1/soosyze/?todo/index).
+Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?q=todo/index](http://127.0.0.1/soosyze/?q=todo/index).
 Le résultat est censé être : 
 
 ![Illustration 08_controleur-restful.png](/assets/development/08_controleur-restful.png)
+
+Vous pouvez également utiliser la méthode `json()` fournit par le contrôleur :
+
+```php
+public function index( ServerRequestInterface $req ){
+    return $this->json(200, ["Affichage de la liste"]);
+}
+```
+
 
 ## Redirect
 
@@ -142,26 +157,25 @@ Une redirection n’est rien de plus qu’une réponse HTTP avec un code 301 (*F
 Par exemple, lorsque nous validerons l’édition d’un item, il faudra rediriger l’utilisateur vers la page d’admin de la "to do list". Ajoutez le composant `Soosyze\Components\Http\Redirect`, puis ajoutez les lignes suivantes dans la fonction `udpate()` :
 
 ```php
-# modules/TodoModule/Controller/TodoController.php
+# app/modules/TodoModule/Controller/TodoController.php
 
 /* Le namespace doit refléter votre arborescence. */
-namespace TodoModule\Controller;
+namespace SoosyzeExtension\TodoModule\Controller;
 
+use Psr\Http\Message\ServerRequestInterface;
 /* Déclaration de nos objets du composant HTTP. */
 use Soosyze\Components\Http\Redirect;
 use Soosyze\Components\Http\Response;
 use Soosyze\Components\Http\Stream;
 
-define("CONFIG_TODO", MODULES_CONTRIBUED . 'TodoModule' . DS . 'Config' . DS);
-
 class TodoController extends \Soosyze\Controller
 {
     /* […] */
 
-    public function udpate( $id, $req )
+    public function udpate( $id, ServerRequestInterface $req )
     {
         /* Fournit la route à la redirection. */
-        return new Redirect('?todo/index');
+        return new Redirect('?q=todo/index');
     }
 }
 ```

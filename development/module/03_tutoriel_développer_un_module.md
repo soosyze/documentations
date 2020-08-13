@@ -2,9 +2,9 @@
 
 SoosyzeCMS se base sur SoosyzeFramework, chaque fonctionnalité est découpée dans un module correspondant.
 Un module remplit un rôle ou une fonction (*gestion du contenu, des menus, des utilisateurs…*).
-Les modules développés par les contributeurs doivent être déposés dans le répertoire `app/module`, à ne pas confondre avec le répertoire `core/module` qui contient les modules de cœur du CMS.
+Les modules développés par les contributeurs doivent être déposés dans le répertoire `app/module`, à ne pas confondre avec le répertoire `core/module` qui contient les modules de cœur du CMS (ceux-ci sont maintenus par par la team SoosyzeCore).
 
-Via ce tutoriel, je vais vous apprendre à créer un module pour SoosyzeCMS de A à Z.
+Via ce tutoriel, nous allons vous apprendre à créer un module pour SoosyzeCMS de A à Z.
 Dans un premier temps, nous analyserons le développement d’un module typique pour SoosyzeFramework. Puis, dans un second temps, nous verrons comment l’adapter et l’intégrer à SoosyeCMS.
 
 Le module d’exemple permet de créer une "to do list", donnant la possibilité de gérer une liste de tâches. Il permet :

@@ -4,21 +4,21 @@
 
 ### Serveur Web
 
-| Serveur Web                | Soosyze 1.x    |
-|----------------------------|----------------|
-| Apache HTTP Server 2.2+    | ✓ Supporté    |
-| Ngnix 1+                   | ✓ Supporté    |
-| IIS                        | Need test      |
+| Serveur Web             | Soosyze 1.x |
+|-------------------------|-------------|
+| Apache HTTP Server 2.2+ | ✓ Supporté  |
+| Ngnix 1+                | ✓ Supporté  |
+| IIS                     | ✓ Supporté  |
 
 *Pour Ngnix, voir la [recommandation d’intallation](#ngnix).
 
 ### Version PHP
 
-| Version PHP                | Soosyze 1.x     |
-|----------------------------|-----------------|
-| <= 5.3                     | ✗ Non supporté |
-| 5.4 / 5.5 / 5.6            | ✓ Supporté     |
-| 7.0 / 7.1 / 7.2 / 7.3      | ✓ Supporté     |
+| Version PHP                 | Soosyze 1.x    |
+|-----------------------------|----------------|
+| <= 5.3                      | ✗ Non supporté |
+| 5.4 / 5.5 / 5.6             | ✓ Supporté     |
+| 7.0 / 7.1 / 7.2 / 7.3 / 7.4 | ✓ Supporté     |
 
 En choisissant les versions PHP 7.x, vous aurez un gain de performance sur la mémoire et un gain de temps d’exécution de 30% à 45% : votre site sera plus rapide et mieux référencé.
 
@@ -30,7 +30,8 @@ En choisissant les versions PHP 7.x, vous aurez un gain de performance sur la m�
 * `gd` : pour la maniplation d’image,
 * `json` : pour l’enregistrement des données et des configurations,
 * `mbstring` : pour vos emails,
-* `session` : pour garder en mémoire vos données (côté serveur) d’une page à l’autre.
+* `session` : pour garder en mémoire vos données (côté serveur) d’une page à l’autre,
+* `zip` pour créer des sauvegarde et le restaurer en cas d'erreur.
 
 Ces extensions sont généralement actives par défaut. Si l’une venait à manquer, un message d’erreur vous en informerait.
 
@@ -51,7 +52,9 @@ Le thème de base ainsi que celui d’administration se déchargent d’une part
 
 * Bootstrap 3.3.7,
 * JQuery 3.2.1,
-* JQuery UI 1.12.0.
+* JQuery UI 1.12.0,
+* Select2,
+* Font Awesome 5.8.1.
 
 Pour l’affichage complet des thèmes de base, il sera nécessaire de disposer d’une connexion réseau, afin d’être en mesure d’utiliser ces bibliothèques.
 
@@ -101,8 +104,8 @@ Pour suivre les tutoriels, je vous invite à installer le CMS à la racine de vo
 
 Maintenant que les fichiers sources sont au bon endroit, ouvrez un navigateur web (*Firefox, Chrome, Opéra, Safarie, Edge…*), et dans la barre d’adresse, entrez la valeur suivante :
 
-*   en local : [127.0.0.1/soosyze](http://127.0.0.1/soosyze),
-*   en ligne : votre nom de domaine.
+* En local : [127.0.0.1/soosyze](http://127.0.0.1/soosyze),
+* En ligne : votre nom de domaine.
 
 La page suivante se présentera à vous. Remplissez tous les champs et cliquez sur **Installer**.
 

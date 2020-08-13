@@ -6,10 +6,14 @@ Un module doit contenir l’arborescence suivante :
 
 ```
 TodoModule/
-├── Config/     Les fichiers de configurations et paramétrages.
-├── Controller/ Les contrôleurs.
-├── Services/   Les services et hooks.
-└── Views/      Les vues (templates).
+├─ Assets/     Vos fichiers CSS, JS, images...
+├─ Config/     Les fichiers de configurations et paramétrages.
+├─ Controller/ Les contrôleurs.
+├─ Lang/       Les fichiers de traductions.
+│  └─ fr/
+├─ Migrations/ Les scripts de mise à jour.
+├─ Services/   Les services et hooks.
+└─ Views/      Les vues (templates).
 ```
 
 Vous disposez maintenant d’une arborescence complète. nous verrons dans le chapitre suivant comment créer notre première interaction avec le module.
