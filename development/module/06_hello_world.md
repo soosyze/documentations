@@ -79,7 +79,7 @@ class Core extends App
                 ]
             ],
             'template' => [
-                'class'     => 'SoosyzeCore\\Template\\Services\\TemplatingHtml',
+                'class'     => 'SoosyzeCore\\Template\\Services\\Templating',
                 'arguments' => [
                     '@core',
                     '@config'
@@ -102,7 +102,7 @@ class Core extends App
                 'class'     => 'SoosyzeCore\\Translate\\Services\\Translation',
                 'arguments' => [
                     '@config',
-                   __DIR__ . '/lang',
+                    __DIR__ . '/lang',
                     'en'
                 ]
             ]
