@@ -16,6 +16,7 @@ Dans le répertoire `TodoModule/Config`, créez un fichier `routes.php` avec le 
 
 ```php
 <?php
+# app/modules/TodoModule/Config/routes.php
 
 use Soosyze\Components\Router\Route as R;
 

@@ -139,6 +139,8 @@ Nous allons donc rajouter les routes suivantes :
 Modifiez le fichier `routes.php` et ajoutez les lignes suivantes à la suite de nos routes créées précédemment :
 
 ```php
+# app/modules/TodoModule/Config/routes.php
+
 /**
  * R:methode(key, path, classe, with);
  */
