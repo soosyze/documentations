@@ -1,18 +1,59 @@
 # Installer
 
-Si vous avez suivi le chapitre précédent, vous savez qu’il existe deux façons d’héberger votre site web. Cette distinction se fera aussi pour l’installation du CMS.
+Si vous avez suivi le [chapitre précédent](/user/00_héberger.md)., vous savez qu’il existe deux façons d’héberger votre site web. Cette distinction se fera aussi pour l’installation du CMS.
 
-## Déposer le code source en local
+Vous devez commencer par la mise en place du code source de Soosyze sur votre serveur puis lancer l'installation.
 
-### En local sur Linux
+## Pré-requis
 
-* [Déposer le code source en local dans Apache pour Ubuntu/Debian](/user/01_installer_linux.md).
+### Serveur Web
 
-### En local sur Windows
+| Web server              | Soosyze 1.x   |
+|-------------------------|---------------|
+| Apache HTTP Server 2.2+ | ✓ Supported   |
+| Ngnix 1+                | ✓ Supported*  |
+| IIS                     | ✓ Supported** |
 
-* [Déposer le code source en local dans WampServeur 3(Apache) pour Windows](/user/01_installer_windows.md).
+### Version PHP
 
-## Déposer le code source en ligne
+| PHP version                 | Soosyze 1.x   |
+|-----------------------------|---------------|
+| <= 5.3                      | ✗ Unsupported |
+| 5.4 / 5.5 / 5.6             | ✓ Supported   |
+| 7.0 / 7.1 / 7.2 / 7.3 / 7.4 | ✓ Supported   |
+
+### Extensions PHP requises
+
+* `date` pour le format des dates, 
+* `fileinfo` pour la validation de fichier, 
+* `filter` pour valider vos données, 
+* `gd` pour la maniplation d'image, 
+* `json` pour l'enregistrement des données et des configurations, 
+* `mbstring` pour vos emails, 
+* `session` pour garder en mémoire vos données (*coté serveur*) d'une page à l'autre,
+* `zip` pour créer des sauvegarde et le restaurer en cas d'erreur.
+
+### Mémoire requise
+
+Soosyze (hors modules contributeurs) nécessite minimum 8MB de mémoire.
+
+## Mise en place de Soosyze en local
+
+### Sur Linux (Ubuntu/Debian)
+
+* [Déposer le code source dans Apache pour Linux (Ubuntu/Debian)](/user/01_installer_linux.md),
+  * [Vérifier les prés requis](/user/01_installer_linux.md#vérifier-les-prés-requis),
+  * [Installer Composer](/user/01_installer_linux.md#installer-composer),
+  * [Déposer le code source](/user/01_installer_linux.md#déposer-le-code-source),
+  * [Attribuer les droits utilisateurs](/user/01_installer_linux.md#attribuer-les-droits-utilisateurs).
+
+### Sur Windows
+
+* [Déposer le code source dans WampServeur 3(Apache) pour Windows](/user/01_installer_windows.md),
+  * [Vérifier les prés requis](/user/01_installer_windows.md#vérifier-les-prés-requis),
+  * [Déposer le code source](/user/01_installer_windows.md#déposer-le-code-source).
+
+## Mise en place de Soosyze en ligne
 
 Si vous en êtes à ce paragraphe, c’est que vous avez souscrit à une offre d’hébergement en ligne.  
 Pour déposer les fichiers sources de l’application, vous devez avoir un accès entre votre ordinateur et le serveur en ligne.
@@ -63,13 +104,13 @@ Vous voilà connecté à votre serveur :
 
 Le répertoire qui est censé recevoir le code source est souvent nommé par défaut **www**, mais attention : ce n’est pas systématiquement le cas. Renseignez-vous auprès de votre hébergeur.
 
-[Et voilà, vous êtes prêt à installer SoosyzeCMS](#installer-le-cms).
+Et voilà, vous êtes prêt à installer SoosyzeCMS.
 
 ## Installer le CMS
 
 Maintenant que les fichiers sources sont au bon endroit, ouvrez un navigateur web (*Firefox, Chrome, Opéra, Safari, Edge…*), et dans la barre d’adresse, entrez la valeur suivante :
 
-* En local, [127.0.0.1/Soosyze](http://127.0.0.1/Soosyze),
+* En local, [127.0.0.1/Soosyze](http://127.0.0.1/soosyze),
 * En ligne, votre nom de domaine.
 
 La page suivante se présentera à vous. Sélectionner votre langue, remplissez tous les champs et cliquez sur **_Suivant_**.
@@ -81,3 +122,5 @@ Puis créer votre compte utilisateur et cliquez sur **_Installer_**.
 ![Screenshot de la page d’instalaltion de SoosyzeCMS](/assets/user/install-step_2.png)
 
 Et voilà, le CMS est installé.
+
+[Étape 3 : Configurer](/user/02_configurer.md)

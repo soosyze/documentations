@@ -102,3 +102,5 @@ Il suffit de vous inscrire sur l’un d’entre eux, souscrire à l’une des of
 * Et votre **mot de passe**.
 
 Retenez-les bien, vous en aurez besoin pour la suite.
+
+[Étape 2 : Configurer](/user/01_installer.md)

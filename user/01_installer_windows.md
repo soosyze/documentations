@@ -1,25 +1,13 @@
-### Déposer le code source en local dans **WampServeur 3**(Apache) pour Windows
+# Déposer le code source en local dans **WampServeur 3**(Apache) pour Windows
 
 Dans le chapitre précédent, nous avons expliqué comment installer WampServer 3 (*WAMP*) pour faire fonctionner votre site en local. Ici, nous verrons où déposer Soosyze dans WAMP pour le faire fonctionner.
 Mais avant nous allons nous assurer que vous avez tous les pré requis pour le bon fonctionnement de Soosyze.
 
-## Prés requis
+## Vérifier les prés requis
 
-Soosyze requière plusieurs extensions nécessaires à son fonctionnement :
+Soosyze requière plusieurs extensions nécessaires à son fonctionnement, il se peut que certaines soient désactivées de bases, vous devrez donc les identifier et les activer.
 
-* `date` pour le format des dates, 
-* `fileinfo` pour la validation de fichier, 
-* `filter` pour valider vos données, 
-* `gd` pour la maniplation d'image, 
-* `json` pour l'enregistrement des données et des configurations, 
-* `mbstring` pour vos emails, 
-* `session` pour garder en mémoire vos données (coté serveur) d'une page à l'autre.
-
-Cependant, il se peut que certaines viennent à manquer dans les paquets de bases, vous devrez donc les identifier et les installer.
-
-Assurer vous que WAMP soit lancé et cliquer sur son icone dans la barre de menu en base à droite :
-
-Aller dans Apache > Modules Apache et vérifier que les extensions requises soient activées :
+Assurer vous que WAMP soit lancé et cliquer sur son icone dans la barre de menu en base à droite, aller dans PHP > Extensions PHP et vérifier que les extensions requises soient activées :
 
 ![Screenshot de la extension php WAMP](/assets/user/windows-wamp-extensions.png)
 

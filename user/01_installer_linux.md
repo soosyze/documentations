@@ -1,21 +1,11 @@
-# Déposer le code source en local dans Apache pour Ubuntu/Debian
+# Déposer le code source dans Apache pour Linux (Ubuntu/Debian)
 
 Dans le chapitre précédent, nous avons expliqué comment installer Apache et PHP pour faire fonctionner votre site en local. Ici, nous verrons où déposer Soosyze pour le faire fonctionner.
 Mais avant nous allons nous assurer que vous avez tous les pré requis pour le bon fonctionnement de Soosyze.
 
-## Pré-requis
+## Vérifier les prés requis
 
-Soosyze requière plusieurs extensions nécessaires à son fonctionnement :
-
-* `date` pour le format des dates, 
-* `fileinfo` pour la validation de fichier, 
-* `filter` pour valider vos données, 
-* `gd` pour la maniplation d'image, 
-* `json` pour l'enregistrement des données et des configurations, 
-* `mbstring` pour vos emails, 
-* `session` pour garder en mémoire vos données (*coté serveur*) d'une page à l'autre.
-
-Cependant, il se peut que certaines viennent à manquer dans les paquets de bases, vous devrez donc les identifier et les installer.
+Soosyze requière plusieurs extensions nécessaires à son fonctionnement, cependant, il se peut que certaines viennent à manquer dans les paquets de bases, vous devrez donc les identifier et les installer.
 
 La commande suivante listera les extensions actuellement installées, à vous d'identifier celles qui manquent :
 
@@ -23,13 +13,13 @@ La commande suivante listera les extensions actuellement installées, à vous d'
 php -m
 ```
 
-**Pour info !** D'expérience, les bibliothèques `gd`, `mbstring` et `date` ne sont pas fournies systématiquement avec le paquet PHP de base, pour les installer, lancer la commande suivante :
+**Pour info !** D'expérience, les bibliothèques `gd`, `mbstring` et `date`, `zip` ne sont pas fournies systématiquement avec le paquet PHP de base, pour les installer, lancer la commande suivante :
 
 ```
 sudo apt-get install php-mbstring php-date php-gd php-xml php-zip
 ```
 
-Vous noterez que cette commande contient également les extensions `php-xml` et `php-zip`. La première est utilisée par **Composer** (*[cf. le point suivant](#installer-composer)*) et la seconde est fréquemment utilisée dans les projets PHP, il est conseillé de l'avoir.
+Vous noterez que cette commande contient également les extensions `php-xml`. Celle-ci est utilisée par **Composer** (*[cf. le point suivant](#installer-composer)*).
 
 ![Screenshot de l'ajout d'extensions php sous Ubuntu](/assets/user/ubuntu-apache-install-php_extensions.png)
 
@@ -75,7 +65,7 @@ sudo phpdismod -v 7.2 mbstring
 sudo phpdismod -s apache2 mbstring
 ```
 
-### Installer Composer
+## Installer Composer
 
 Pour installer Soosyze nous allons utiliser le gestionnaire de dépendances **Composer** qu'il faut installer sur votre machine en lançant la commande suivante :
 
@@ -91,9 +81,9 @@ Pour vérifier que Composer est bien installé lancer la commande suivante :
 composer -v
 ```
 
-![Screenshot de la commande composer -v sous Ubuntu](/assets/user/ubuntu-apache-install-composer.png)
+![Screenshot de la commande composer -v sous Ubuntu](/assets/user/ubuntu-apache-composer-v.png)
 
-### Installer Soosyze CMS
+## Déposer le code source
 
 Maintenant que toutes les extensions et outils sont installés, vous allez pouvoir enfin installer Soosyze. Rendez-vous dans le répertoire qui contiendra vos site web en lançant la commande suivante :
 
@@ -104,7 +94,7 @@ cd /var/www/html
 Et lancer le téléchargement et l'installation des dépendances de Soosyze avec la commande suivante :
 
 ```
-sudo composer create-project soosyze/soosyze --stability=alpha –-no-dev
+sudo composer create-project soosyze/soosyze --stability=beta –-no-dev
 ```
 
 ### Attribuer les droits utilisateurs
